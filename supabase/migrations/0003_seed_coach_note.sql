@@ -1,0 +1,5 @@
+-- After your own coach account signs up through /signup, promote it manually:
+--
+--   update public.profiles set role = 'coach' where id = '<your-auth-user-id>';
+--
+-- Find your auth user id in Supabase Studio under Authentication > Users.
