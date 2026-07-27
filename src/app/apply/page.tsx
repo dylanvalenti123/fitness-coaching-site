@@ -162,7 +162,7 @@ export default function ApplyPage() {
     "/photos/silhouette-arms-wide.png",
     "/photos/silhouette-side-back.png",
   ];
-  const STEP_OPACITIES = [0.22, 0.22, 0.55, 0.45, 0.45, 0.45, 0.45];
+  const STEP_OPACITIES = [0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9];
 
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-forge px-6 py-20">
@@ -195,7 +195,7 @@ export default function ApplyPage() {
         </div>
 
         {/* Card */}
-        <div className="card rounded-sm p-8">
+        <div className="rounded-sm p-8" style={{ background: "rgba(12,8,2,0.35)" }}>
           {/* Progress bar */}
           <div className="mb-6 h-0.5 w-full bg-forge-4">
             <div

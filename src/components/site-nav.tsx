@@ -1,11 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { createClient } from "@/lib/supabase/server";
 
 export async function SiteNav() {
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
-
   return (
     <header className="sticky top-0 z-50 bg-forge/95 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -27,29 +23,20 @@ export async function SiteNav() {
             <Link href="/pricing" className="transition hover:text-fire">PLANS</Link>
             <Link href="/#faq" className="transition hover:text-fire">FAQ</Link>
           </div>
-          {user ? (
-            <Link
-              href="/dashboard"
-              className="border border-[rgba(122,24,16,0.3)] bg-[#22110a] px-5 py-2.5 font-sub text-xs font-bold tracking-widest text-warm transition hover:border-[rgba(122,24,16,0.6)] hover:bg-[#2c1810]"
-            >
-              DASHBOARD
-            </Link>
-          ) : (
-            <Link
-              href="/apply"
-              className="border border-[rgba(122,24,16,0.3)] bg-[#22110a] px-5 py-2.5 font-sub text-xs font-bold tracking-widest text-warm transition hover:border-[rgba(122,24,16,0.6)] hover:bg-[#2c1810]"
-            >
-              BOOK FREE CALL
-            </Link>
-          )}
+          <Link
+            href="/apply"
+            className="border border-[rgba(122,24,16,0.3)] bg-[#22110a] px-5 py-2.5 font-sub text-xs font-bold tracking-widest text-warm transition hover:border-[rgba(122,24,16,0.6)] hover:bg-[#2c1810]"
+          >
+            BOOK A CALL
+          </Link>
         </div>
 
         {/* Mobile */}
         <Link
-          href={user ? "/dashboard" : "/apply"}
+          href="/apply"
           className="border border-[rgba(122,24,16,0.3)] bg-[#22110a] px-4 py-2 font-sub text-xs font-bold tracking-widest text-warm sm:hidden"
         >
-          {user ? "Dashboard" : "Book Call"}
+          Book A Call
         </Link>
       </nav>
     </header>
