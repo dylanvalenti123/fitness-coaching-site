@@ -219,7 +219,7 @@ export default function ApplyPage() {
                 className={`w-full rounded-sm border px-6 py-4 text-left text-sm font-sub font-medium transition ${
                   selected === opt
                     ? "border-fire bg-fire/10 text-fire"
-                    : "border-forge-4 text-warm hover:border-fire hover:text-warm hover:shadow-[0_0_12px_rgba(122,24,16,0.4)]"
+                    : "border-forge-4 bg-transparent text-warm hover:border-fire hover:text-warm hover:shadow-[0_0_12px_rgba(122,24,16,0.4)]"
                 }`}
               >
                 {opt}
