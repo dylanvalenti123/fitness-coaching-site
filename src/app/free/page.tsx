@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { createClient } from "@/lib/supabase/client";
 
 const FIRE = "#b82818";
 
@@ -155,19 +154,7 @@ export default function FreePage() {
     if (!questionsValid()) return;
     setSubmitting(true);
     try {
-      const supabase = createClient();
-      await supabase.from("leads").insert({
-        first_name: form.firstName,
-        last_name: form.lastName,
-        email: form.email,
-        phone: form.phone,
-        goal: answers.goal,
-        serious: answers.serious,
-        holding: answers.holding,
-        invest: answers.invest,
-        stats: answers.stats,
-        platform: answers.platform,
-      });
+      // lead capture placeholder
     } catch {
       // don't block the user if save fails
     }
