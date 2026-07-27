@@ -195,7 +195,7 @@ export default function ApplyPage() {
         </div>
 
         {/* Card */}
-        <div className="rounded-sm p-8" style={{ background: "rgba(12,8,2,0.35)" }}>
+        <div className="rounded-sm p-8">
           {/* Progress bar */}
           <div className="mb-6 h-0.5 w-full bg-forge-4">
             <div
