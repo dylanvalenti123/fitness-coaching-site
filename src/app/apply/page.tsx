@@ -126,7 +126,7 @@ export default function ApplyPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(122,24,16,0.1)_0%,transparent_60%)]" />
         <Dots />
         <div className="relative max-w-xl">
-          <span className="text-5xl">🔥</span>
+
           <h1 className="font-display mt-6 text-[clamp(2.5rem,8vw,5rem)] leading-none text-warm">
             YOU&apos;RE A GOOD FIT.
           </h1>

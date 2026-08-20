@@ -201,7 +201,7 @@ export default function ApplyIgPage() {
               boxShadow: `0 4px 24px rgba(184,40,24,0.45)`,
             }}
           >
-            🔥 BOOK YOUR FREE CALL
+            BOOK YOUR FREE CALL
           </a>
           <p className="mt-3 text-xs text-warm-muted">
             No commitment. Just a call to see if it&apos;s the right fit.

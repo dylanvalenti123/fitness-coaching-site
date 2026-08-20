@@ -804,7 +804,7 @@ export default function HomePage() {
             Answer a few quick questions so Dylan can review your situation before your call. It takes under a minute.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/apply" className="btn-primary">🔥 BOOK YOUR FREE CALL</Link>
+            <Link href="/apply" className="btn-primary">BOOK YOUR FREE CALL</Link>
             <Link href="/apply" className="btn-outline">APPLY NOW</Link>
           </div>
         </div>

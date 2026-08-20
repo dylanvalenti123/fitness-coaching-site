@@ -51,7 +51,7 @@ export default function PricingPage() {
             </ul>
 
             <Link href="/apply" className="btn-primary mt-10 block w-full text-center">
-              🔥 BOOK YOUR FREE CALL
+              BOOK YOUR FREE CALL
             </Link>
             <p className="mt-4 text-center text-xs text-warm-muted">
               No commitment. Just a call to see if it&apos;s the right fit.

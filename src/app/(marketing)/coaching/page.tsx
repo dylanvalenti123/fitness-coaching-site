@@ -160,7 +160,7 @@ export default function CoachingPage() {
             href="/apply"
             className="btn-primary mt-8 inline-block px-10 py-4 font-sub text-sm font-bold tracking-wider"
           >
-            🔥 Book a Free Call
+            Book a Free Call
           </Link>
         </div>
       </section>
