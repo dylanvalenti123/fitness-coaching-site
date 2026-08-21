@@ -29,8 +29,8 @@ const features = [
     icon: <PhoneIcon />,
   },
   {
-    title: "Built Around Your Life",
-    desc: "Designed for busy men — your job, your schedule, your recovery.",
+    title: "Form Checks",
+    desc: "Send clips and get feedback. There's no guessing if you're doing it right.",
     icon: <TrendingUpIcon />,
   },
 ];
