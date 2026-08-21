@@ -753,9 +753,6 @@ export default function HomePage() {
             <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(2.8rem,7vw,5rem)", color: "#f0ebe3" }}>
               ONE PROGRAM.<br />BUILT FOR YOU.
             </h2>
-            <p className="mt-4 text-[15px]" style={{ color: "#b8a898" }}>
-              This isn&apos;t a template. Custom training, real nutrition accountability, and Dylan&apos;s personal number — pricing confirmed on your free call.
-            </p>
           </div>
           <div className="mt-14 mx-auto max-w-lg">
             <div className="relative overflow-hidden rounded-sm p-8 sm:p-10"
