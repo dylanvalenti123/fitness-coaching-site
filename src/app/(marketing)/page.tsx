@@ -29,17 +29,17 @@ const features = [
     icon: <PhoneIcon />,
   },
   {
-    title: "Built For Skinny Guys",
-    desc: "The exact system that took Dylan from 170 to 200lbs.",
+    title: "Built Around Your Life",
+    desc: "Designed for busy men — your job, your schedule, your recovery.",
     icon: <TrendingUpIcon />,
   },
 ];
 
 const struggles = [
-  "Can't gain weight no matter what I eat",
-  "Don't know how to train properly",
-  "No consistent plan to follow",
-  "Tried everything, nothing has worked",
+  "I'm too busy with work to stay consistent",
+  "I don't have a structured plan that fits my schedule",
+  "I've been training but not seeing real progress",
+  "I don't know how to eat to actually build muscle",
 ];
 
 const coachingFeatures = [
@@ -75,7 +75,7 @@ const testimonials = [
 
 const faqs = [
   { q: <>Why Are <em>You</em> Able To Coach?</>, a: "No formal certification. My results are the proof. I took myself from 170 to 200lbs of muscle and built this program around the exact process that got me there, then refined it coaching real guys since. It's based on what's actually worked, not a textbook template." },
-  { q: "I've tried bulking before and just got fat. How is this different?", a: "Accountability. You send Dylan photos of everything you eat throughout the day. He reviews them, tells you what's working, what isn't, and keeps you on track, no guessing, no generic meal plan you'll ignore after day 3." },
+  { q: "I've tried training before but always fall off. How is this different?", a: "Accountability. You send Dylan photos of everything you eat throughout the day. He reviews them, tells you what's working, what isn't, and keeps you on track. The plan also adjusts weekly around your actual schedule — so when work gets busy, the program adapts instead of falling apart." },
   { q: "How long until I see results?", a: "Most guys see meaningful scale and strength movement in 4-6 weeks, and visible size change by 8-12 weeks. Bulking is months-long. Consistency matters more than intensity." },
   { q: "How much does coaching cost?", a: "There's no set price. Every plan is custom based on your goals, timeline, and how much hands-on support you want. Pricing gets confirmed on your free call once Dylan understands what you're looking for." },
   { q: "What happens on the free call?", a: "Dylan reviews your situation, explains the program in detail, and maps out what your plan would actually look like. No pressure, just a conversation to see if it's the right fit." },
@@ -376,7 +376,7 @@ export default function HomePage() {
           className="absolute bottom-[28%] right-[10%] z-10 hidden items-center gap-2 border-l-2 pl-3 text-xs font-sub font-semibold uppercase tracking-wider lg:flex"
           style={{ borderColor: FIRE, color: "#b8a898" }}
         >
-          Coach Dylan V. · 170→200lbs in 7 months
+          Coach Dylan V. · Helping Busy Men Build Muscle
         </div>
 
         {/* Text content */}
@@ -385,18 +385,18 @@ export default function HomePage() {
             <div className="flex items-center gap-3">
               <div className="h-px w-8" style={{ background: FIRE }} />
               <p className="font-sub text-xs font-semibold tracking-[0.25em]" style={{ color: FIRE }}>
-                1-ON-1 ONLINE COACHING FOR SKINNY GUYS
+                1-ON-1 ONLINE COACHING FOR BUSY MEN
               </p>
             </div>
             <h1 className="font-display mt-6 leading-[0.95]" style={{ fontSize: "clamp(3.5rem,8.5vw,7rem)", color: "#f0ebe3" }}>
-              BUILD THE FRAME<br />
-              <span style={{ color: FIRE }}>170 → 200LBS</span><br />
-              IN 7 MONTHS.
+              BUILD MUSCLE<br />
+              <span style={{ color: FIRE }}>WITHOUT LIVING</span><br />
+              IN THE GYM.
             </h1>
             <p className="mt-8 max-w-lg text-[15px] leading-relaxed" style={{ color: "#b8a898" }}>
-              If you&apos;re tired of being the skinniest guy in the room, this is the program that changes that.
-              Not just your body, your confidence, your presence, the way people treat you. The exact process
-              that made me feel 100x more confident and made me stop feeling like someone people could walk over.
+              You&apos;re busy. Work, responsibilities, life — the gym keeps getting pushed back.
+              This program is built around your schedule, not the other way around. Structured training,
+              real accountability, and a coach who adjusts your plan every single week.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/apply" className="btn-primary">BOOK YOUR FREE CALL →</Link>
@@ -445,18 +445,18 @@ export default function HomePage() {
             <div className="relative px-10 py-16 sm:px-16 sm:py-20 max-w-2xl">
               <p className="font-sub text-xs font-semibold tracking-[0.25em]" style={{ color: FIRE }}>THE COACH</p>
               <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(2.8rem,6.5vw,5rem)", color: "#f0ebe3" }}>
-                I WAS THE SKINNY GUY TOO.
+                MOST PROGRAMS AREN&apos;T BUILT FOR YOUR LIFE.
               </h2>
               <p className="mt-6 text-[15px] leading-relaxed" style={{ color: "#d4c8b8" }}>
-                I wasn&apos;t always 200lbs. I was the guy people talked over. The one who got ignored
-                in a group. Skinny, quiet, easy to overlook. After a bad breakup I realized how much
-                of it came down to how I felt about myself. A huge part of that was how I looked
-                and how weak I felt in my own body. So I fixed it.
+                Most guys who struggle to build muscle aren&apos;t lazy — they&apos;re busy. Work takes
+                over, the schedule falls apart, and months go by without real progress. The problem isn&apos;t
+                effort. It&apos;s that nobody built a plan that actually fits around your life.
               </p>
               <p className="mt-4 text-[15px] leading-relaxed" style={{ color: "#d4c8b8" }}>
-                I went from 170lbs to 200lbs in 7 months and built a system so other guys don&apos;t
-                have to spend years guessing like I did. No generic templates. Every plan is built
-                around your body, your schedule, and your recovery. This is the program that changes your life.
+                I went from 170lbs to 200lbs training with a structured plan that fit my life — not a
+                4-hour gym split. I built this coaching program around that same principle. Custom training,
+                real nutrition accountability, and a coach who adjusts everything weekly based on how you&apos;re
+                actually recovering and progressing.
               </p>
             </div>
           </div>
@@ -516,7 +516,7 @@ export default function HomePage() {
           <div ref={resultsHeadRef} className="text-center mb-14" style={{ willChange: "transform" }}>
             <p className="font-sub text-xs font-semibold tracking-[0.25em]" style={{ color: FIRE }}>CLIENT TRANSFORMATIONS</p>
             <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(2.8rem,6vw,4.5rem)", color: "#f0ebe3" }}>
-              GUYS JUST LIKE YOU, TRANSFORMED.
+              REAL RESULTS FROM REAL PEOPLE.
             </h2>
           </div>
           {/* 1 — Aidan back */}
@@ -678,7 +678,7 @@ export default function HomePage() {
       {/* ── SOCIAL PROOF BAND ── */}
       <div style={{ background: FIRE }} className="py-5">
         <div ref={socialProofRef} className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-10 px-6 text-center" style={{ willChange: "transform" }}>
-          {["40LBS GAINED IN 12 MONTHS", "30LBS IN THE FIRST 7", "100% STRUCTURED, NOT GUESSWORK"].map((t, i) => (
+          {["BUILT AROUND YOUR SCHEDULE", "REAL RESULTS, NOT GUESSWORK", "COACHING THAT ACTUALLY ADJUSTS"].map((t, i) => (
             <>
               {i > 0 && <div key={`d${i}`} className="hidden h-4 w-px sm:block" style={{ background: "rgba(255,255,255,0.3)" }} />}
               <p key={t} className="font-sub text-sm font-bold tracking-[0.2em] text-white">{t}</p>
