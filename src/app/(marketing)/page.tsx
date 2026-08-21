@@ -20,7 +20,7 @@ const features = [
   },
   {
     title: "Food Photo Accountability",
-    desc: "Snap and send pics of what you eat. Dylan reviews them and gives you real feedback, no meal plans, just honest accountability.",
+    desc: "Send Dylan photos of what you eat. He reviews them and tells you exactly what you're doing good with and what to fix.",
     icon: <CameraIcon />,
   },
   {
