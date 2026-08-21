@@ -25,7 +25,7 @@ const features = [
   },
   {
     title: "Weekly Check-Ins",
-    desc: "Direct access to Dylan, every week, no exceptions.",
+    desc: "Direct 1 on 1 calls with Dylan, every week.",
     icon: <PhoneIcon />,
   },
   {
