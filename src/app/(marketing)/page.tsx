@@ -394,9 +394,9 @@ export default function HomePage() {
               IN THE GYM.
             </h1>
             <p className="mt-8 max-w-lg text-[15px] leading-relaxed" style={{ color: "#b8a898" }}>
-              You&apos;re busy. Work, responsibilities, life — the gym keeps getting pushed back.
-              This program is built around your schedule, not the other way around. Structured training,
-              real accountability, and a coach who adjusts your plan every single week.
+              You&apos;re busy. Work, responsibilities, life... the gym keeps getting pushed back.
+              This program is built around YOUR schedule, not the other way around. Structured training,
+              real accountability, and a coach who will get you to your goals.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/apply" className="btn-primary">BOOK YOUR FREE CALL →</Link>
