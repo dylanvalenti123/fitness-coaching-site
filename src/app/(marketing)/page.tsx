@@ -771,7 +771,6 @@ export default function HomePage() {
                 LIMITED SPOTS
               </div>
               <h3 className="font-display text-4xl sm:text-5xl" style={{ color: "#f0ebe3" }}>1-on-1 Coaching</h3>
-              <p className="mt-2 text-sm" style={{ color: "#b8a898" }}>Full access. Real accountability. Results that actually stick.</p>
               <p className="mt-4 font-sub text-xs font-semibold" style={{ color: FIRE }}>Pricing confirmed on your free call</p>
               <ul className="mt-6 space-y-3">
                 {coachingFeatures.map((f) => (
