@@ -15,7 +15,7 @@ const stats = [
 const features = [
   {
     title: "Custom Training",
-    desc: "Programmed and adjusted around your recovery every week.",
+    desc: "Programmed around your work schedule, your recovery, and your life. Adjusted every week.",
     icon: <DumbbellIcon />,
   },
   {
