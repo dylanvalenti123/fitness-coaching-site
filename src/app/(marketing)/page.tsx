@@ -471,7 +471,11 @@ export default function HomePage() {
         </div>
       </section>
       {/* ── HOW IT WORKS ── */}
-      <section style={{ background: "#1a1208", position: "relative" }}>
+      <section style={{ background: "#1a1208", position: "relative", overflow: "hidden" }}>
+        <div className="absolute inset-0">
+          <Image src="/photos/dylan-gym-curl.jpg" alt="" fill className="object-cover" style={{ objectPosition: "center 30%", opacity: 0.18 }} sizes="100vw" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(26,18,8,0.95) 0%, rgba(26,18,8,0.7) 60%, rgba(26,18,8,0.5) 100%)" }} />
+        </div>
         <Dots count={6} />
         <div className="relative mx-auto max-w-6xl px-6 pt-24 pb-10 sm:pt-32 sm:pb-12">
           <div className="max-w-2xl">
