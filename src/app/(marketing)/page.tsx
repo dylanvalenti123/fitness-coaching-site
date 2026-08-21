@@ -493,7 +493,7 @@ export default function HomePage() {
                 ].map((step) => (
                   <div key={step.num} className="flex gap-6">
                     <div className="shrink-0">
-                      <p className="font-display leading-none" style={{ fontSize: "3rem", color: "rgba(122,24,16,0.3)" }}>{step.num}</p>
+                      <p className="font-display leading-none" style={{ fontSize: "3rem", color: "rgba(122,24,16,0.7)" }}>{step.num}</p>
                     </div>
                     <div className="pt-1">
                       <h3 className="font-sub text-base font-bold" style={{ color: "#f0ebe3" }}>{step.title}</h3>
