@@ -43,7 +43,7 @@ const struggles = [
 ];
 
 const coachingFeatures = [
-  "Fully custom training program built around your body",
+  "Fully custom training program",
   "Send food photos: Dylan reviews them and gives real feedback",
   "Weekly nutrition overview (no complicated meal plan)",
   "Dylan's personal number: text him directly, anytime",
