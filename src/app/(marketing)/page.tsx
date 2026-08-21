@@ -432,7 +432,7 @@ export default function HomePage() {
           <div className="relative overflow-hidden rounded-sm">
             <div ref={beachImgRef} className="absolute inset-[-15%]" style={{ willChange: "transform" }}>
               <Image
-                src="/photos/dylan-coach.jpg"
+                src="/photos/dylan-arms-crossed.jpg"
                 alt=""
                 fill
                 className="object-cover"
