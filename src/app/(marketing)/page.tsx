@@ -448,15 +448,10 @@ export default function HomePage() {
                 MOST PROGRAMS AREN&apos;T BUILT FOR YOUR LIFE.
               </h2>
               <p className="mt-6 text-[15px] leading-relaxed" style={{ color: "#d4c8b8" }}>
-                Most guys who struggle to build muscle aren&apos;t lazy — they&apos;re busy. Work takes
-                over, the schedule falls apart, and months go by without real progress. The problem isn&apos;t
-                effort. It&apos;s that nobody built a plan that actually fits around your life.
+                Most busy guys aren&apos;t failing because they&apos;re lazy. They&apos;re failing because their program doesn&apos;t fit their life.
               </p>
               <p className="mt-4 text-[15px] leading-relaxed" style={{ color: "#d4c8b8" }}>
-                I went from 170lbs to 200lbs training with a structured plan that fit my life — not a
-                4-hour gym split. I built this coaching program around that same principle. Custom training,
-                real nutrition accountability, and a coach who adjusts everything weekly based on how you&apos;re
-                actually recovering and progressing.
+                I fixed that. Custom online training, nutrition accountability, and weekly adjustments built around your schedule, not the other way around.
               </p>
             </div>
           </div>
