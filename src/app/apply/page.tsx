@@ -44,7 +44,7 @@ const QUESTIONS = [
       "Build muscle and get stronger",
       "Look better without spending hours in the gym",
       "Lose fat and build muscle at the same time",
-      "Build a specific physique / frame",
+      "Other (tell us)",
     ],
   },
   {
