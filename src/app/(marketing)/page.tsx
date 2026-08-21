@@ -45,7 +45,7 @@ const struggles = [
 const coachingFeatures = [
   "Fully custom training program built around your body",
   "Send food photos: Dylan reviews them and gives real feedback",
-  "Weekly nutrition overview (no rigid meal plan)",
+  "Weekly nutrition overview (no complicated meal plan)",
   "Dylan's personal number: text him directly, anytime",
   "Weekly check-in calls & program adjustments",
   "Form review",
