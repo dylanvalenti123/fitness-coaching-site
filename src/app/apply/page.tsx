@@ -169,10 +169,10 @@ export default function ApplyPage() {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ opacity: 0.18, objectPosition: "center top" }}
+          className="absolute top-0 left-0 w-full"
+          style={{ opacity: 0.22 }}
         >
-          <source src="/photos/dylan-bench-315.mov" type="video/mp4" />
+          <source src="/photos/dylan-bench-315-crop.mp4" type="video/mp4" />
         </video>
         {/* Coach image — right side background */}
         <div className="absolute inset-y-0 right-0 w-1/2 pointer-events-none">
