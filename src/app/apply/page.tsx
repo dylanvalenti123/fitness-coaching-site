@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -71,29 +71,36 @@ const BOOKING_URL =
   process.env.NEXT_PUBLIC_BOOKING_URL ||
   "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3Ze1sCmDHkFN-2-OGR4a_aUDmCZu147VwHkU0TrrsJPLDXhQqSR1LojpegJ3TrD1-H9-YuO4pn";
 
-function Dots() {
-  const positions = [
-    { top: "15%", left: "8%" }, { top: "30%", left: "92%" }, { top: "55%", left: "5%" },
-    { top: "70%", left: "88%" }, { top: "85%", left: "15%" }, { top: "20%", left: "75%" },
-  ];
-  return (
-    <>
-      {positions.map((pos, i) => (
-        <div
-          key={i}
-          className="pointer-events-none absolute h-1.5 w-1.5 rounded-full bg-fire/40"
-          style={pos}
-        />
-      ))}
-    </>
-  );
-}
+const RESULTS = [
+  {
+    name: "Aidan",
+    result: "+18 lbs of muscle in 5 months",
+    quote: "I had tried everything on my own. Dylan gave me a plan that actually fit my schedule and I finally started seeing real progress.",
+    before: "/photos/aidan-before-2b.jpg",
+    after: "/photos/aidan-after-2b.jpg",
+  },
+  {
+    name: "Dash",
+    result: "Went from skinny to filling out his frame",
+    quote: "Working full-time made it hard to stay consistent. Dylan kept me accountable and the program adjusted every single week.",
+    before: "/photos/dash-before-2.jpg",
+    after: "/photos/dash-after-2.jpg",
+  },
+  {
+    name: "Nick",
+    result: "Built size without overhauling his life",
+    quote: "I didn't have to meal prep or live in the gym. Dylan showed me what actually matters and cut out all the noise.",
+    before: "/photos/nick-before-1.jpg",
+    after: "/photos/nick-after-1.jpg",
+  },
+];
 
 export default function ApplyPage() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [selected, setSelected] = useState<string | null>(null);
   const [done, setDone] = useState(false);
+  const quizRef = useRef<HTMLDivElement>(null);
 
   const current = QUESTIONS[step];
   const progress = ((step + 1) / QUESTIONS.length) * 100;
@@ -120,13 +127,15 @@ export default function ApplyPage() {
     setSelected(answers[QUESTIONS[step - 1].id] || null);
   }
 
+  function scrollToQuiz() {
+    quizRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
   if (done) {
     return (
       <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-forge px-6 py-20 text-center">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(122,24,16,0.1)_0%,transparent_60%)]" />
-        <Dots />
         <div className="relative max-w-xl">
-
           <h1 className="font-display mt-6 text-[clamp(2.5rem,8vw,5rem)] leading-none text-warm">
             YOU&apos;RE A GOOD FIT.
           </h1>
@@ -162,92 +171,199 @@ export default function ApplyPage() {
     "/photos/silhouette-arms-wide.png",
     "/photos/silhouette-side-back.png",
   ];
-  const STEP_OPACITIES = [0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9];
 
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-forge px-6 py-20">
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <Image
-          key={step}
-          src={STEP_SILHOUETTES[step]}
-          alt=""
-          width={600}
-          height={600}
-          style={{ objectFit: "contain", opacity: STEP_OPACITIES[step] }}
-          className="transition-opacity duration-500"
-        />
-      </div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,24,16,0.06)_0%,transparent_60%)]" />
-      <Dots />
-      <div className="relative w-full max-w-2xl">
-        {/* Header */}
-        <div className="mb-10 text-center">
+    <div className="bg-forge text-warm">
+
+      {/* ── PROOF SECTION ── */}
+      <section className="relative min-h-screen flex flex-col justify-center px-6 py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,24,16,0.08)_0%,transparent_60%)]" />
+
+        <div className="relative mx-auto w-full max-w-4xl">
+
+          {/* Eyebrow */}
           <p className="font-sub text-xs font-semibold tracking-[0.3em] text-fire">
-            FREE CONSULTATION
+            1-ON-1 ONLINE COACHING
           </p>
-          <h1 className="font-display mt-2 text-[clamp(2rem,6vw,4rem)] leading-none text-warm">
-            BOOK YOUR FREE CALL.
+
+          {/* Headline */}
+          <h1 className="font-display mt-3 text-[clamp(2.8rem,8vw,6rem)] leading-none text-warm">
+            BUILT FOR MEN<br />WHO ARE BUSY.
           </h1>
-          <p className="mt-3 text-sm text-warm-muted">
-            Answer a few quick questions so Dylan can review your situation before your
-            call. It takes under a minute.
+
+          {/* Sub */}
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-warm-muted">
+            Dylan works with men who have real jobs, real schedules, and real life getting in the way.
+            No templates. No cookie-cutter plans. Just a program built around you — adjusted every week.
           </p>
-        </div>
 
-        {/* Card */}
-        <div className="rounded-sm p-8">
-          {/* Progress bar */}
-          <div className="mb-6 h-0.5 w-full bg-forge-4">
-            <div
-              className="h-full bg-gradient-to-r from-fire-dark to-fire transition-all duration-300"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-
-          <p className="font-sub text-xs font-semibold tracking-widest text-fire">
-            QUESTION {step + 1} OF {QUESTIONS.length}
-          </p>
-          <h2 className="font-display mt-3 text-[clamp(1.5rem,4vw,2.5rem)] leading-tight text-warm">
-            {current.text}
-          </h2>
-
-          <div className="mt-6 space-y-3">
-            {current.options.map((opt) => (
-              <button
-                key={opt}
-                onClick={() => choose(opt)}
-                className={`w-full rounded-sm border px-6 py-4 text-left text-sm font-sub font-medium transition ${
-                  selected === opt
-                    ? "border-fire bg-fire/10 text-fire"
-                    : "border-forge-4 bg-transparent text-warm hover:border-fire hover:text-warm hover:shadow-[0_0_12px_rgba(122,24,16,0.4)]"
-                }`}
-              >
-                {opt}
-              </button>
+          {/* Who it's for */}
+          <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3 max-w-2xl">
+            {[
+              "You're working full-time and can't afford to waste hours in the gym",
+              "You want to build muscle but have no idea where to start",
+              "You've tried before — it didn't stick because the plan didn't fit your life",
+            ].map((item, i) => (
+              <div key={i} className="flex gap-3 items-start border border-forge-4 p-4">
+                <span className="mt-0.5 text-fire font-sub font-bold text-xs">0{i + 1}</span>
+                <p className="text-sm text-warm-muted leading-relaxed">{item}</p>
+              </div>
             ))}
           </div>
 
-          <div className="mt-8 flex items-center justify-between">
-            {step > 0 ? (
-              <button
-                onClick={back}
-                className="text-sm font-sub font-medium text-warm-muted transition hover:text-warm"
-              >
-                ← Back
-              </button>
-            ) : (
-              <div />
-            )}
+          {/* Dylan intro */}
+          <div className="mt-14 flex flex-col sm:flex-row gap-8 items-start max-w-2xl">
+            <div className="relative w-28 h-36 flex-shrink-0 overflow-hidden">
+              <Image
+                src="/photos/dylan-arms-crossed.jpg"
+                alt="Dylan Valenti"
+                fill
+                className="object-cover object-top"
+                sizes="112px"
+              />
+            </div>
+            <div>
+              <p className="font-sub text-xs font-bold tracking-widest text-fire">THE COACH</p>
+              <h2 className="font-display mt-1 text-2xl leading-tight text-warm">DYLAN VALENTI</h2>
+              <p className="mt-3 text-sm text-warm-muted leading-relaxed">
+                Dylan went from 150 lbs to 200 lbs and has coached dozens of men through the same process.
+                He gives you his personal number, reviews what you eat, checks your form, and adjusts your
+                plan every week. You're not getting an app. You're getting a coach.
+              </p>
+            </div>
+          </div>
+
+          {/* Results */}
+          <div className="mt-16">
+            <p className="font-sub text-xs font-bold tracking-[0.3em] text-fire mb-8">CLIENT RESULTS</p>
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+              {RESULTS.map((r) => (
+                <div key={r.name} className="flex flex-col gap-3">
+                  {/* Before/After photos */}
+                  <div className="flex gap-2">
+                    <div className="relative flex-1 aspect-[3/4] overflow-hidden">
+                      <Image src={r.before} alt={`${r.name} before`} fill className="object-cover object-top" sizes="200px" />
+                      <div className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[9px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.75)", color: "#b8a898" }}>BEFORE</div>
+                    </div>
+                    <div className="relative flex-1 aspect-[3/4] overflow-hidden">
+                      <Image src={r.after} alt={`${r.name} after`} fill className="object-cover object-top" sizes="200px" />
+                      <div className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[9px] font-bold tracking-widest" style={{ background: "rgba(184,40,24,0.8)", color: "#f0ebe3" }}>AFTER</div>
+                    </div>
+                  </div>
+                  {/* Name + result */}
+                  <div>
+                    <p className="font-sub text-xs font-bold tracking-widest text-fire">{r.name.toUpperCase()}</p>
+                    <p className="mt-0.5 text-sm font-medium text-warm">{r.result}</p>
+                    <p className="mt-2 text-xs text-warm-muted leading-relaxed italic">&ldquo;{r.quote}&rdquo;</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Scroll CTA */}
+          <div className="mt-16 flex flex-col items-start gap-4">
+            <p className="text-sm text-warm-muted">
+              If this sounds like you — take 60 seconds to answer a few questions below.
+              Dylan reviews every application personally.
+            </p>
             <button
-              onClick={next}
-              disabled={!selected}
-              className="border border-[rgba(122,24,16,0.3)] bg-[#22110a] px-8 py-3 text-sm font-sub font-bold tracking-wider text-warm transition hover:border-[rgba(122,24,16,0.6)] hover:bg-[#2c1810] disabled:cursor-not-allowed disabled:opacity-40"
+              onClick={scrollToQuiz}
+              className="border border-fire bg-fire/10 px-8 py-4 text-sm font-sub font-bold tracking-wider text-fire transition hover:bg-fire/20"
             >
-              CONTINUE →
+              APPLY NOW ↓
             </button>
           </div>
+
         </div>
-      </div>
+      </section>
+
+      {/* ── QUIZ SECTION ── */}
+      <section ref={quizRef} className="relative min-h-screen flex flex-col items-center justify-center px-6 py-24 overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <Image
+            key={step}
+            src={STEP_SILHOUETTES[step]}
+            alt=""
+            width={600}
+            height={600}
+            style={{ objectFit: "contain", opacity: 0.9 }}
+            className="transition-opacity duration-500"
+          />
+        </div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,24,16,0.06)_0%,transparent_60%)]" />
+
+        <div className="relative w-full max-w-2xl">
+          {/* Header */}
+          <div className="mb-10 text-center">
+            <p className="font-sub text-xs font-semibold tracking-[0.3em] text-fire">
+              FREE CONSULTATION
+            </p>
+            <h2 className="font-display mt-2 text-[clamp(2rem,6vw,4rem)] leading-none text-warm">
+              BOOK YOUR FREE CALL.
+            </h2>
+            <p className="mt-3 text-sm text-warm-muted">
+              Answer a few quick questions so Dylan can review your situation before your
+              call. It takes under a minute.
+            </p>
+          </div>
+
+          {/* Card */}
+          <div className="rounded-sm p-8">
+            {/* Progress bar */}
+            <div className="mb-6 h-0.5 w-full bg-forge-4">
+              <div
+                className="h-full bg-gradient-to-r from-fire-dark to-fire transition-all duration-300"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
+
+            <p className="font-sub text-xs font-semibold tracking-widest text-fire">
+              QUESTION {step + 1} OF {QUESTIONS.length}
+            </p>
+            <h3 className="font-display mt-3 text-[clamp(1.5rem,4vw,2.5rem)] leading-tight text-warm">
+              {current.text}
+            </h3>
+
+            <div className="mt-6 space-y-3">
+              {current.options.map((opt) => (
+                <button
+                  key={opt}
+                  onClick={() => choose(opt)}
+                  className={`w-full rounded-sm border px-6 py-4 text-left text-sm font-sub font-medium transition ${
+                    selected === opt
+                      ? "border-fire bg-fire/10 text-fire"
+                      : "border-forge-4 bg-transparent text-warm hover:border-fire hover:text-warm hover:shadow-[0_0_12px_rgba(122,24,16,0.4)]"
+                  }`}
+                >
+                  {opt}
+                </button>
+              ))}
+            </div>
+
+            <div className="mt-8 flex items-center justify-between">
+              {step > 0 ? (
+                <button
+                  onClick={back}
+                  className="text-sm font-sub font-medium text-warm-muted transition hover:text-warm"
+                >
+                  ← Back
+                </button>
+              ) : (
+                <div />
+              )}
+              <button
+                onClick={next}
+                disabled={!selected}
+                className="border border-[rgba(122,24,16,0.3)] bg-[#22110a] px-8 py-3 text-sm font-sub font-bold tracking-wider text-warm transition hover:border-[rgba(122,24,16,0.6)] hover:bg-[#2c1810] disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                CONTINUE →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
