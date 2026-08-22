@@ -210,23 +210,24 @@ export default function ApplyPage() {
           </div>
 
           {/* Dylan intro */}
-          <div className="mt-14 flex flex-col sm:flex-row gap-8 items-start max-w-2xl">
-            <div className="relative w-28 h-36 flex-shrink-0 overflow-hidden">
+          <div className="mt-14 relative overflow-hidden max-w-2xl">
+            <div className="absolute inset-0">
               <Image
                 src="/photos/dylan-arms-crossed.jpg"
-                alt="Dylan Valenti"
+                alt=""
                 fill
                 className="object-cover object-top"
-                sizes="112px"
+                sizes="672px"
               />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(12,8,2,0.92) 0%, rgba(12,8,2,0.7) 60%, rgba(12,8,2,0.92) 100%)" }} />
             </div>
-            <div>
+            <div className="relative p-8">
               <p className="font-sub text-xs font-bold tracking-widest text-fire">THE COACH</p>
               <h2 className="font-display mt-1 text-2xl leading-tight text-warm">DYLAN VALENTI</h2>
               <p className="mt-3 text-sm text-warm-muted leading-relaxed">
-                Dylan went from 150 lbs to 200 lbs and has coached dozens of men through the same process.
-                He gives you his personal number, reviews what you eat, checks your form, and adjusts your
-                plan every week. You're not getting an app. You're getting a coach.
+                I went from 170 to 200 lbs and have coached dozens of men through the same process.
+                I give you my personal number, review what you eat, check your form, and adjust your
+                plan every week. You&apos;re not getting an app. You&apos;re getting a coach.
               </p>
             </div>
           </div>
