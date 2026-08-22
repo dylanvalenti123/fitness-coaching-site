@@ -424,7 +424,7 @@ export default function HomePage() {
               <div className="absolute bottom-0 left-0 right-0 py-2 text-center font-sub text-[11px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.8)", color: "#b8a898" }}>BEFORE · 170 LBS</div>
             </div>
             <div className="relative flex-1 aspect-[3/4] overflow-hidden">
-              <Image src="/photos/dylan-after-2.jpg" alt="After" fill className="object-cover" style={{ objectPosition: "center 50%" }} sizes="250px" />
+              <Image src="/photos/dylan-after-2.jpg" alt="After" fill className="object-cover" style={{ objectPosition: "center 20%", transform: "scale(1.3)", transformOrigin: "center 20%" }} sizes="250px" />
               <div className="absolute bottom-0 left-0 right-0 py-2 text-center font-sub text-[11px] font-bold tracking-widest" style={{ background: "rgba(184,40,24,0.8)", color: "#f0ebe3" }}>AFTER · 200 LBS</div>
             </div>
           </div>
