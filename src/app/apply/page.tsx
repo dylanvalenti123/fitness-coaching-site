@@ -263,7 +263,7 @@ export default function ApplyPage() {
           {/* Scroll CTA */}
           <div className="mt-16 flex flex-col items-start gap-4">
             <p className="text-sm text-warm-muted">
-              If this sounds like you — take 60 seconds to answer a few questions below.
+              If this sounds like you, take 60 seconds to answer a few questions below.
               Dylan reviews every application personally.
             </p>
             <button
