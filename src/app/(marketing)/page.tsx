@@ -436,7 +436,7 @@ export default function HomePage() {
                 alt=""
                 fill
                 className="object-cover"
-                style={{ objectPosition: "60% center" }}
+                style={{ objectPosition: "center center" }}
                 sizes="1200px"
               />
             </div>
