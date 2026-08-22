@@ -441,7 +441,7 @@ export default function HomePage() {
               />
             </div>
             {/* Dark overlay so text is readable */}
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(12,8,2,0.92) 0%, rgba(12,8,2,0.75) 60%, rgba(12,8,2,0.4) 100%)" }} />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(12,8,2,0.75) 0%, rgba(12,8,2,0.4) 40%, rgba(12,8,2,0.75) 100%)" }} />
             <div className="relative px-10 py-16 sm:px-16 sm:py-20 max-w-2xl">
               <p className="font-sub text-xs font-semibold tracking-[0.25em]" style={{ color: FIRE }}>THE COACH</p>
               <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(2.8rem,6.5vw,5rem)", color: "#f0ebe3" }}>
