@@ -79,20 +79,6 @@ const RESULTS = [
     before: "/photos/aidan-before-2b.jpg",
     after: "/photos/aidan-after-2b.jpg",
   },
-  {
-    name: "Dash",
-    result: "Went from skinny to filling out his frame",
-    quote: "Working full-time made it hard to stay consistent. Dylan kept me accountable and the program adjusted every single week.",
-    before: "/photos/dash-before-2.jpg",
-    after: "/photos/dash-after-2.jpg",
-  },
-  {
-    name: "Nick",
-    result: "Built size without overhauling his life",
-    quote: "I didn't have to meal prep or live in the gym. Dylan showed me what actually matters and cut out all the noise.",
-    before: "/photos/nick-before-1.jpg",
-    after: "/photos/nick-after-1.jpg",
-  },
 ];
 
 export default function ApplyPage() {
@@ -188,7 +174,19 @@ export default function ApplyPage() {
         >
           <source src="/photos/dylan-bench-315.mov" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-forge/60" />
+        {/* Coach image — right side background */}
+        <div className="absolute inset-y-0 right-0 w-1/2 pointer-events-none">
+          <Image
+            src="/photos/dylan-arms-crossed.jpg"
+            alt=""
+            fill
+            className="object-cover object-top"
+            style={{ opacity: 0.15 }}
+            sizes="50vw"
+          />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, var(--color-forge, #0c0802) 0%, transparent 40%, var(--color-forge, #0c0802) 100%)" }} />
+        </div>
+        <div className="absolute inset-0 bg-forge/50" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,24,16,0.08)_0%,transparent_60%)]" />
 
         <div className="relative mx-auto w-full max-w-4xl">
