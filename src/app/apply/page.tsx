@@ -119,28 +119,29 @@ export default function ApplyPage() {
 
   if (done) {
     return (
-      <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-forge px-6 py-20 text-center">
+      <div className="relative min-h-screen bg-forge px-6 py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(122,24,16,0.1)_0%,transparent_60%)]" />
-        <div className="relative max-w-xl">
-          <h1 className="font-display mt-6 text-[clamp(2.5rem,8vw,5rem)] leading-none text-warm">
+        <div className="relative mx-auto max-w-3xl text-center">
+          <h1 className="font-display text-[clamp(2.5rem,8vw,5rem)] leading-none text-warm">
             YOU&apos;RE A GOOD FIT.
           </h1>
           <p className="mt-4 text-base leading-relaxed text-warm-muted">
-            Based on your answers, Dylan can help you build real size fast. Book your free
-            15-minute call to map out exactly what your plan looks like.
+            Pick a time below for your free 15-minute call. Dylan reviews every application personally.
           </p>
-          <Link
-            href={BOOKING_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-10 inline-block border border-[rgba(122,24,16,0.3)] bg-[#22110a] px-10 py-4 text-sm font-sub font-bold tracking-wider text-warm transition hover:border-[rgba(122,24,16,0.6)] hover:bg-[#2c1810]"
-          >
-            BOOK YOUR FREE CALL
-          </Link>
-          <p className="mt-4 text-xs text-warm-muted">
+
+          {/* Embedded calendar */}
+          <div className="mt-10 overflow-hidden rounded-sm border border-forge-4">
+            <iframe
+              src={`${BOOKING_URL}&embed=true`}
+              style={{ border: 0, width: "100%", height: "700px" }}
+              frameBorder="0"
+            />
+          </div>
+
+          <p className="mt-6 text-xs text-warm-muted">
             No commitment. Just a call to see if it&apos;s the right fit.
           </p>
-          <Link href="/" className="mt-6 block text-xs text-warm-muted underline hover:text-fire">
+          <Link href="/" className="mt-4 block text-xs text-warm-muted underline hover:text-fire">
             ← Back to home
           </Link>
         </div>
