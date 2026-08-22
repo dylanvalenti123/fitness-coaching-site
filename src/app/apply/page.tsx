@@ -170,7 +170,7 @@ export default function ApplyPage() {
           loop
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ opacity: 0.18 }}
+          style={{ opacity: 0.18, objectPosition: "center top" }}
         >
           <source src="/photos/dylan-bench-315.mov" type="video/mp4" />
         </video>
