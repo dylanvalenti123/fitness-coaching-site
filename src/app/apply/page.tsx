@@ -234,7 +234,7 @@ export default function ApplyPage() {
 
           {/* Results */}
           <div className="mt-16">
-            <p className="font-sub text-xs font-bold tracking-[0.3em] text-fire mb-8">CLIENT RESULTS</p>
+            <p className="font-sub text-xs font-bold tracking-[0.3em] text-fire mb-8">1 CLIENT RESULT</p>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
               {RESULTS.map((r) => (
                 <div key={r.name} className="flex flex-col gap-3">
