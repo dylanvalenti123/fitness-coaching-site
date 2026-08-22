@@ -177,6 +177,18 @@ export default function ApplyPage() {
 
       {/* ── PROOF SECTION ── */}
       <section className="relative min-h-screen flex flex-col justify-center px-6 py-24 overflow-hidden">
+        {/* Video background */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ opacity: 0.18 }}
+        >
+          <source src="/photos/dylan-bench-315.mov" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-forge/60" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,24,16,0.08)_0%,transparent_60%)]" />
 
         <div className="relative mx-auto w-full max-w-4xl">
