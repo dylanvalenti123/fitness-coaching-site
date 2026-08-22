@@ -174,18 +174,6 @@ export default function ApplyPage() {
         >
           <source src="/photos/dylan-bench-315-crop.mp4" type="video/mp4" />
         </video>
-        {/* Coach image — right side background */}
-        <div className="absolute inset-y-0 right-0 w-1/2 pointer-events-none">
-          <Image
-            src="/photos/dylan-arms-crossed.jpg"
-            alt=""
-            fill
-            className="object-cover object-top"
-            style={{ opacity: 0.15 }}
-            sizes="50vw"
-          />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, var(--color-forge, #0c0802) 0%, transparent 40%, var(--color-forge, #0c0802) 100%)" }} />
-        </div>
         <div className="absolute inset-0 bg-forge/30" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,24,16,0.08)_0%,transparent_60%)]" />
 
