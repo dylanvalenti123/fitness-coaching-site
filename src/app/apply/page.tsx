@@ -193,8 +193,8 @@ export default function ApplyPage() {
 
           {/* Sub */}
           <p className="mt-6 max-w-xl text-base leading-relaxed text-warm-muted">
-            Dylan works with men who have real jobs, real schedules, and real life getting in the way.
-            No templates. No cookie-cutter plans. Just a program built around you — adjusted every week.
+            Dylan works with men who have real careers, real schedules, and real life getting in the way.
+            No cookie-cutter plans. Just a program built around you.
           </p>
 
           {/* Who it's for */}
