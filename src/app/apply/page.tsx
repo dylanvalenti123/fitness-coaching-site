@@ -170,7 +170,7 @@ export default function ApplyPage() {
           loop
           playsInline
           className="absolute top-0 left-0 w-full"
-          style={{ opacity: 0.22 }}
+          style={{ opacity: 0.45 }}
         >
           <source src="/photos/dylan-bench-315-crop.mp4" type="video/mp4" />
         </video>
@@ -186,7 +186,7 @@ export default function ApplyPage() {
           />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to right, var(--color-forge, #0c0802) 0%, transparent 40%, var(--color-forge, #0c0802) 100%)" }} />
         </div>
-        <div className="absolute inset-0 bg-forge/50" />
+        <div className="absolute inset-0 bg-forge/30" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,24,16,0.08)_0%,transparent_60%)]" />
 
         <div className="relative mx-auto w-full max-w-4xl">
