@@ -69,7 +69,7 @@ const QUESTIONS = [
 
 const BOOKING_URL =
   process.env.NEXT_PUBLIC_BOOKING_URL ||
-  "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3Ze1sCmDHkFN-2-OGR4a_aUDmCZu147VwHkU0TrrsJPLDXhQqSR1LojpegJ3TrD1-H9-YuO4pn";
+  "https://calendly.com/dylanvalenti123/30min";
 
 const RESULTS = [
   {
@@ -132,7 +132,7 @@ export default function ApplyPage() {
           {/* Embedded calendar */}
           <div className="mt-10 overflow-hidden rounded-sm border border-forge-4">
             <iframe
-              src={`${BOOKING_URL}&embed=true`}
+              src="https://calendly.com/dylanvalenti123/30min?embed_domain=dylanvalenticoaching.com&embed_type=Inline"
               style={{ border: 0, width: "100%", height: "700px" }}
               frameBorder="0"
             />
