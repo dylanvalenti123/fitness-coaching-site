@@ -262,14 +262,14 @@ export default function ApplyPage() {
           </div>
 
           {/* Scroll CTA */}
-          <div className="mt-16 flex flex-col items-start gap-4">
+          <div className="mt-8 flex flex-col items-start gap-3">
             <p className="text-sm text-warm-muted">
               If this sounds like you, take 60 seconds to answer a few questions below.
               Dylan reviews every application personally.
             </p>
             <button
               onClick={scrollToQuiz}
-              className="border border-fire bg-fire/10 px-8 py-4 text-sm font-sub font-bold tracking-wider text-fire transition hover:bg-fire/20"
+              className="border border-fire bg-fire/10 px-8 py-3 text-sm font-sub font-bold tracking-wider text-fire transition hover:bg-fire/20"
             >
               APPLY NOW ↓
             </button>
@@ -279,7 +279,7 @@ export default function ApplyPage() {
       </section>
 
       {/* ── QUIZ SECTION ── */}
-      <section ref={quizRef} className="relative min-h-screen flex flex-col items-center justify-center px-6 py-24 overflow-hidden">
+      <section ref={quizRef} className="relative min-h-screen flex flex-col items-center justify-center px-6 py-12 overflow-hidden">
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <Image
             key={step}
