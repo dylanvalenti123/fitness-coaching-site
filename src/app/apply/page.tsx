@@ -203,8 +203,8 @@ export default function ApplyPage() {
               "You want to build muscle but have no idea where to start",
               "You've tried before — it didn't stick because the plan didn't fit your life",
             ].map((item, i) => (
-              <div key={i} className="flex gap-3 items-start border border-forge-4 p-4">
-                <span className="mt-0.5 text-fire font-sub font-bold text-xs">0{i + 1}</span>
+              <div key={i} className="flex gap-3 items-start p-4" style={{ background: "rgba(12,8,2,0.6)", backdropFilter: "blur(8px)", borderLeft: "1px solid rgba(122,24,16,0.4)" }}>
+                <span className="mt-0.5 text-fire font-sub font-bold text-xs flex-shrink-0">0{i + 1}</span>
                 <p className="text-sm text-warm-muted leading-relaxed">{item}</p>
               </div>
             ))}
