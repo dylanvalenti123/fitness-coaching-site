@@ -197,7 +197,7 @@ export default function ApplyPage() {
           </p>
 
           {/* Who it's for */}
-          <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3 max-w-2xl">
+          <div className="mt-16 grid grid-cols-1 gap-3 sm:grid-cols-3 max-w-2xl">
             {[
               "You're working full-time and can't afford to waste hours in the gym",
               "You want to build muscle but have no idea where to start",
