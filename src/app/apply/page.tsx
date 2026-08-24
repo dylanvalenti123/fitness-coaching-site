@@ -137,7 +137,6 @@ export default function ApplyPage() {
       {/* ── CALENDLY SECTION ── */}
       <section ref={calRef} className="bg-forge px-6 py-20">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="font-sub text-xs font-semibold tracking-[0.3em] text-fire">FREE CONSULTATION</p>
           <h2 className="font-display mt-2 text-[clamp(2rem,6vw,4rem)] leading-none text-warm">
             BOOK YOUR FREE CALL.
           </h2>
