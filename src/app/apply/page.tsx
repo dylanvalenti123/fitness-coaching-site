@@ -35,7 +35,7 @@ export default function ApplyPage() {
           className="absolute top-0 left-0 w-full"
           style={{ opacity: 0.45 }}
         >
-          <source src="/photos/dylan-bench-v2.mp4" type="video/mp4" />
+          <source src="/photos/dylan-bench-v3.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-forge/30" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,24,16,0.08)_0%,transparent_60%)]" />
