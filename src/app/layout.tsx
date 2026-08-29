@@ -27,6 +27,10 @@ const oswald = Oswald({
 export const metadata: Metadata = {
   title: "Dylan Valenti Coaching",
   description: "Gain 30lbs of muscle in 7 months. Online coaching from Dylan Valenti: real structure, not guesswork.",
+  icons: {
+    icon: "/favicon-dv.png",
+    apple: "/favicon-dv.png",
+  },
 };
 
 export default function RootLayout({
