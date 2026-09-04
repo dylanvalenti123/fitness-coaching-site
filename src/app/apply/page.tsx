@@ -7,7 +7,7 @@ import Image from "next/image";
 const RESULTS = [
   {
     name: "Aidan",
-    result: "+18 lbs of muscle in 5 months",
+    result: "+18 lbs of muscle in 4 months",
     quote: "I had tried everything on my own. Dylan gave me a plan that actually fit my schedule and I finally started seeing real progress.",
     before: "/photos/aidan-before-2b.jpg",
     after: "/photos/aidan-after-2b.jpg",

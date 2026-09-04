@@ -63,7 +63,7 @@ const testimonials = [
   },
   {
     quote: "",
-    name: "Aidan", duration: "6 months", initial: "A",
+    name: "Aidan", duration: "4 months", initial: "A",
     photo: undefined as string | undefined,
   },
   {
