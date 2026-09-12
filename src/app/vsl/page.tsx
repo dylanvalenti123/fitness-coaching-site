@@ -41,8 +41,8 @@ export default function VSLPage() {
         </h1>
 
         <p className="text-sm text-warm-muted max-w-xl mx-auto leading-relaxed mb-10">
-          I went from 160 lbs with no real structure to 200 lbs with a program built around my life —
-          not the other way around. Watch the breakdown below.
+          I went from 160 lbs with no real structure to 200 lbs with a program built around my life.
+          Watch the breakdown below.
         </p>
 
         {/* YouTube embed */}
