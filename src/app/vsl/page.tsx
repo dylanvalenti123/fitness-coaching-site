@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 
 const RESULTS = [
@@ -58,17 +57,22 @@ export default function VSLPage() {
           />
         </div>
 
-        {/* CTA below video */}
-        <div className="mt-10">
-          <Link
-            href="/apply"
-            className="inline-block border border-fire bg-fire px-10 py-4 text-sm font-sub font-bold tracking-wider text-warm transition hover:bg-fire/80"
-          >
-            APPLY FOR 1-ON-1 COACHING →
-          </Link>
-          <p className="mt-3 text-xs text-warm-muted">
-            Dylan reviews every application personally. Spots are limited.
+        {/* Calendly below video */}
+        <div className="mt-10 text-left">
+          <p className="font-sub text-xs font-bold tracking-[0.3em] text-fire mb-2 text-center">BOOK YOUR CALL</p>
+          <h2 className="font-display text-[clamp(1.8rem,5vw,3rem)] leading-none text-warm mb-3 text-center">
+            READY TO START?
+          </h2>
+          <p className="text-sm text-warm-muted mb-6 text-center">
+            Pick a time below. Dylan reviews every booking personally.
           </p>
+          <div className="overflow-hidden rounded-sm border border-forge-4">
+            <iframe
+              src="https://calendly.com/dylanvalenti123/30min?embed_domain=dylanvalenticoaching.com&embed_type=Inline"
+              style={{ border: 0, width: "100%", height: "700px" }}
+              frameBorder="0"
+            />
+          </div>
         </div>
       </section>
 
@@ -134,29 +138,6 @@ export default function VSLPage() {
             </div>
           ))}
         </div>
-      </section>
-
-      {/* ── APPLY CTA SECTION ── */}
-      <section
-        className="px-6 py-20 text-center"
-        style={{ background: "rgba(122,24,16,0.08)", borderTop: "1px solid rgba(122,24,16,0.2)" }}
-      >
-        <p className="font-sub text-xs font-bold tracking-[0.3em] text-fire mb-3">
-          1-ON-1 ONLINE COACHING
-        </p>
-        <h2 className="font-display text-[clamp(2rem,6vw,4rem)] leading-none text-warm mb-4">
-          READY TO BUILD YOUR BEST BODY?
-        </h2>
-        <p className="text-sm text-warm-muted max-w-lg mx-auto leading-relaxed mb-8">
-          If you&apos;re serious about putting on real muscle without wasting time figuring it out
-          on your own — apply below. It takes 60 seconds.
-        </p>
-        <Link
-          href="/apply"
-          className="inline-block border border-fire bg-fire px-10 py-4 text-sm font-sub font-bold tracking-wider text-warm transition hover:bg-fire/80"
-        >
-          APPLY FOR COACHING →
-        </Link>
       </section>
 
     </div>
