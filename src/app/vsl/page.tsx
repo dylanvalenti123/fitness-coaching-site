@@ -9,13 +9,13 @@ const RESULTS = [
   },
   {
     name: "Dash",
-    result: "Visible abs, up 12 lbs",
+    result: "Lean bulk in 4 months",
     before: "/photos/dash-before-2.jpg",
     after: "/photos/dash-after-2.jpg",
   },
   {
     name: "Nick",
-    result: "Completely transformed physique",
+    result: "Full physique transformation",
     before: "/photos/nick-before-1.jpg",
     after: "/photos/nick-after-1.jpg",
   },
@@ -36,12 +36,12 @@ export default function VSLPage() {
         </p>
 
         <h1 className="font-display text-[clamp(2.4rem,7vw,5rem)] leading-none text-warm mb-4">
-          I GAINED 30 LBS OF MUSCLE.<br />
+          I GAINED 40 LBS OF MUSCLE.<br />
           HERE&apos;S EXACTLY HOW I DID IT.
         </h1>
 
         <p className="text-sm text-warm-muted max-w-xl mx-auto leading-relaxed mb-10">
-          I went from 170 lbs with no real structure to 200 lbs with a program built around my life —
+          I went from 160 lbs with no real structure to 200 lbs with a program built around my life —
           not the other way around. Watch the breakdown below.
         </p>
 
