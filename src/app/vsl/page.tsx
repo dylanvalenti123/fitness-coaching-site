@@ -37,7 +37,8 @@ export default function VSLPage() {
 
         <h1 className="font-display text-[clamp(2.4rem,7vw,5rem)] leading-none text-warm mb-4">
           I GAINED 40 LBS OF MUSCLE.<br />
-          HERE&apos;S EXACTLY HOW I DID IT.
+          HERE&apos;S EXACTLY<br />
+          HOW I DID IT.
         </h1>
 
         <p className="text-sm text-warm-muted max-w-xl mx-auto leading-relaxed mb-10">
