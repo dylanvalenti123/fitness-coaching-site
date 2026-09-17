@@ -47,7 +47,7 @@ export default function ApplyPage() {
           </p>
 
           <h1 className="font-display mt-3 text-[clamp(2.8rem,8vw,6rem)] leading-none text-warm">
-            BUILT FOR MEN<br />WHO ARE BUSY.
+            YOU DON&apos;T NEED<br />MORE TIME.<br />YOU NEED A<br />BETTER PLAN.
           </h1>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-warm-muted">
