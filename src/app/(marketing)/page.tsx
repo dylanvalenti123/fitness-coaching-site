@@ -728,7 +728,7 @@ export default function HomePage() {
             </div>
             <div className="relative overflow-hidden rounded-sm aspect-[3/4]">
               <Image src="/photos/tyler-2257b.jpg" alt="Tyler curls" fill className="object-cover object-top" sizes="400px" />
-              <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[9px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.85)", color: "#f0ebe3" }}>INCLINE CURLS</div>
+              <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[9px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.85)", color: "#f0ebe3" }}>PREACHER CURLS</div>
             </div>
           </div>
           <p className="text-base leading-relaxed mt-6 max-w-2xl" style={{ color: "#b8a898" }}>
