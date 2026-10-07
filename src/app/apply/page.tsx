@@ -145,7 +145,7 @@ export default function ApplyPage() {
           </p>
           <div className="mt-10 overflow-hidden rounded-sm border border-forge-4">
             <iframe
-              src="https://calendly.com/dylanvalenti123/1-on-1call?embed_domain=dylanvalenticoaching.com&embed_type=Inline"
+              src="https://calendly.com/dylanvalenti123/1-on-1call"
               style={{ border: 0, width: "100%", height: "700px" }}
               frameBorder="0"
             />
