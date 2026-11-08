@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const FIRE = "#7a1810";
+const FIRE = "#c9a84c";
 
 export default function AboutPage() {
   return (

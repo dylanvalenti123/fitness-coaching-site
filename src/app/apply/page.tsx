@@ -38,7 +38,7 @@ export default function ApplyPage() {
           <source src="/photos/dylan-bench-v3.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-forge/30" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,24,16,0.08)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,168,76,0.08)_0%,transparent_60%)]" />
 
         <div className="relative mx-auto w-full max-w-4xl">
 
@@ -61,7 +61,7 @@ export default function ApplyPage() {
               "You want to build muscle but have no idea where to start",
               "You've tried before — it didn't stick because the plan didn't fit your life",
             ].map((item, i) => (
-              <div key={i} className="flex gap-3 items-start p-4" style={{ background: "rgba(12,8,2,0.6)", backdropFilter: "blur(8px)", borderLeft: "1px solid rgba(122,24,16,0.4)" }}>
+              <div key={i} className="flex gap-3 items-start p-4" style={{ background: "rgba(12,8,2,0.6)", backdropFilter: "blur(8px)", borderLeft: "1px solid rgba(201,168,76,0.4)" }}>
                 <span className="mt-0.5 text-fire font-sub font-bold text-xs flex-shrink-0">0{i + 1}</span>
                 <p className="text-sm text-warm-muted leading-relaxed">{item}</p>
               </div>
@@ -100,11 +100,11 @@ export default function ApplyPage() {
                   <div className="flex gap-2">
                     <div className="relative flex-1 aspect-[3/4] overflow-hidden">
                       <Image src={r.before} alt={`${r.name} before`} fill className="object-cover object-top" sizes="200px" />
-                      <div className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[9px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.75)", color: "#b8a898" }}>BEFORE</div>
+                      <div className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[9px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.75)", color: "#a8a09a" }}>BEFORE</div>
                     </div>
                     <div className="relative flex-1 aspect-[3/4] overflow-hidden">
                       <Image src={r.after} alt={`${r.name} after`} fill className="object-cover object-top" sizes="200px" />
-                      <div className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[9px] font-bold tracking-widest" style={{ background: "rgba(184,40,24,0.8)", color: "#f0ebe3" }}>AFTER</div>
+                      <div className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[9px] font-bold tracking-widest" style={{ background: "rgba(201,168,76,0.8)", color: "#f0ece3" }}>AFTER</div>
                     </div>
                   </div>
                   <div>

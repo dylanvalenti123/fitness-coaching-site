@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const FIRE = "#7a1810";
+const FIRE = "#c9a84c";
 
 const features = [
   "Fully custom training program",

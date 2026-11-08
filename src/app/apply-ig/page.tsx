@@ -100,9 +100,9 @@ export default function ApplyIgPage() {
     return (
       <div
         className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 py-16 text-center"
-        style={{ background: "#0c0802" }}
+        style={{ background: "#080d18" }}
       >
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(184,40,24,0.12)_0%,transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,168,76,0.12)_0%,transparent_60%)]" />
 
         <div className="relative w-full max-w-sm">
           <div className="mb-6 flex justify-center">
@@ -147,8 +147,8 @@ export default function ApplyIgPage() {
             onClick={() => setStage("quiz")}
             className="mt-8 w-full py-4 font-sub text-sm font-bold tracking-wider text-white transition active:scale-[0.98]"
             style={{
-              background: `linear-gradient(160deg, #1a0602 0%, ${FIRE} 45%, #7a1810 100%)`,
-              boxShadow: `0 4px 24px rgba(184,40,24,0.45)`,
+              background: `linear-gradient(160deg, #1a0602 0%, ${FIRE} 45%, #c9a84c 100%)`,
+              boxShadow: `0 4px 24px rgba(201,168,76,0.45)`,
             }}
           >
             SEE IF YOU QUALIFY →
@@ -166,9 +166,9 @@ export default function ApplyIgPage() {
     return (
       <div
         className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 py-16 text-center"
-        style={{ background: "#0c0802" }}
+        style={{ background: "#080d18" }}
       >
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(184,40,24,0.1)_0%,transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,168,76,0.1)_0%,transparent_60%)]" />
         <div className="relative w-full max-w-sm">
           <div className="mb-4 flex justify-center">
             <Image
@@ -197,8 +197,8 @@ export default function ApplyIgPage() {
             rel="noopener noreferrer"
             className="mt-8 block w-full py-4 font-sub text-sm font-bold tracking-wider text-white transition active:scale-[0.98]"
             style={{
-              background: `linear-gradient(160deg, #1a0602 0%, ${FIRE} 45%, #7a1810 100%)`,
-              boxShadow: `0 4px 24px rgba(184,40,24,0.45)`,
+              background: `linear-gradient(160deg, #1a0602 0%, ${FIRE} 45%, #c9a84c 100%)`,
+              boxShadow: `0 4px 24px rgba(201,168,76,0.45)`,
             }}
           >
             BOOK YOUR FREE CALL
@@ -226,7 +226,7 @@ export default function ApplyIgPage() {
   return (
     <div
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 py-16"
-      style={{ background: "#0c0802" }}
+      style={{ background: "#080d18" }}
     >
       {/* Per-step background silhouette */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
@@ -240,7 +240,7 @@ export default function ApplyIgPage() {
           className="transition-opacity duration-500"
         />
       </div>
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(184,40,24,0.06)_0%,transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,168,76,0.06)_0%,transparent_60%)]" />
 
       <div className="relative w-full max-w-sm">
         <div className="mb-6 flex justify-center">
@@ -297,7 +297,7 @@ export default function ApplyIgPage() {
                     selected === opt
                       ? {
                           borderColor: FIRE,
-                          background: "rgba(184,40,24,0.12)",
+                          background: "rgba(201,168,76,0.12)",
                           color: "#f5ebe3",
                         }
                       : {
@@ -331,7 +331,7 @@ export default function ApplyIgPage() {
             className="px-7 py-3 font-sub text-sm font-bold tracking-wider text-white transition disabled:cursor-not-allowed disabled:opacity-40"
             style={{
               background: selected
-                ? `linear-gradient(160deg, #1a0602 0%, ${FIRE} 45%, #7a1810 100%)`
+                ? `linear-gradient(160deg, #1a0602 0%, ${FIRE} 45%, #c9a84c 100%)`
                 : "rgba(255,255,255,0.06)",
             }}
           >

@@ -109,7 +109,7 @@ export default function VSLPage() {
                   />
                   <div
                     className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[9px] font-bold tracking-widest"
-                    style={{ background: "rgba(12,8,2,0.75)", color: "#b8a898" }}
+                    style={{ background: "rgba(12,8,2,0.75)", color: "#a8a09a" }}
                   >
                     BEFORE
                   </div>
@@ -124,7 +124,7 @@ export default function VSLPage() {
                   />
                   <div
                     className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[9px] font-bold tracking-widest"
-                    style={{ background: "rgba(184,40,24,0.8)", color: "#f0ebe3" }}
+                    style={{ background: "rgba(201,168,76,0.8)", color: "#f0ece3" }}
                   >
                     AFTER
                   </div>

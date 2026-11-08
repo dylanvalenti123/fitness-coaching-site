@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
-const FIRE = "#7a1810";
+const FIRE = "#c9a84c";
 
 const stats = [
   { value: "30lbs", label: "Muscle Gained" },
@@ -81,7 +81,7 @@ const faqs = [
   { q: "What happens on the free call?", a: "Dylan reviews your situation, explains the program in detail, and maps out what your plan would actually look like. No pressure, just a conversation to see if it's the right fit." },
 ];
 
-function Dots({ count = 8, color = "rgba(122,24,16,0.45)" }: { count?: number; color?: string }) {
+function Dots({ count = 8, color = "rgba(201,168,76,0.45)" }: { count?: number; color?: string }) {
   const all = [
     { top: "8%", left: "5%" }, { top: "18%", left: "92%" },
     { top: "42%", left: "2%" }, { top: "60%", left: "96%" },
@@ -163,7 +163,7 @@ function TrendingUpIcon() {
 
 function ImagePlaceholderIcon() {
   return (
-    <svg {...iconProps} stroke="rgba(122,24,16,0.5)" className="h-7 w-7">
+    <svg {...iconProps} stroke="rgba(201,168,76,0.5)" className="h-7 w-7">
       <rect x="3" y="4" width="18" height="16" rx="1.5" />
       <circle cx="8.5" cy="9.5" r="1.5" />
       <path d="M21 16l-5.5-5.5a1 1 0 00-1.4 0L6 18.5" />
@@ -179,15 +179,15 @@ function NeonSilhouette() {
       <div
         className="pointer-events-none absolute inset-0 rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(122,24,16,0.18) 0%, rgba(122,24,16,0.06) 50%, transparent 72%)",
-          boxShadow: "0 0 120px 40px rgba(122,24,16,0.12)",
+          background: "radial-gradient(circle, rgba(201,168,76,0.18) 0%, rgba(201,168,76,0.06) 50%, transparent 72%)",
+          boxShadow: "0 0 120px 40px rgba(201,168,76,0.12)",
         }}
       />
       {/* Image */}
       <div
         className="relative h-[420px] w-[420px] overflow-hidden rounded-full sm:h-[500px] sm:w-[500px]"
         style={{
-          boxShadow: "0 0 0 2px rgba(122,24,16,0.5), 0 0 60px rgba(122,24,16,0.25)",
+          boxShadow: "0 0 0 2px rgba(201,168,76,0.5), 0 0 60px rgba(201,168,76,0.25)",
         }}
       >
         <Image
@@ -204,10 +204,10 @@ function NeonSilhouette() {
         className="absolute right-0 top-[25%] flex items-center gap-2 rounded-full px-3.5 py-2 text-xs font-sub font-semibold"
         style={{
           background: "rgba(12,8,2,0.88)",
-          border: "1px solid rgba(122,24,16,0.45)",
+          border: "1px solid rgba(201,168,76,0.45)",
           backdropFilter: "blur(8px)",
-          boxShadow: "0 0 16px rgba(122,24,16,0.25)",
-          color: "#f0ebe3",
+          boxShadow: "0 0 16px rgba(201,168,76,0.25)",
+          color: "#f0ece3",
         }}
       >
         <span className="h-2 w-2 animate-pulse rounded-full" style={{ background: FIRE }} />
@@ -217,10 +217,10 @@ function NeonSilhouette() {
         className="absolute bottom-[25%] left-0 flex items-center gap-2 rounded-full px-3.5 py-2 text-xs font-sub font-semibold"
         style={{
           background: "rgba(12,8,2,0.88)",
-          border: "1px solid rgba(122,24,16,0.45)",
+          border: "1px solid rgba(201,168,76,0.45)",
           backdropFilter: "blur(8px)",
-          boxShadow: "0 0 16px rgba(122,24,16,0.25)",
-          color: "#f0ebe3",
+          boxShadow: "0 0 16px rgba(201,168,76,0.25)",
+          color: "#f0ece3",
         }}
       >
         <span className="h-2 w-2 animate-pulse rounded-full" style={{ background: FIRE }} />
@@ -237,18 +237,18 @@ function NeonPhoto({ src, alt }: { src: string; alt: string }) {
       <div
         className="absolute inset-0 rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(122,24,16,0.15) 0%, transparent 70%)",
-          boxShadow: "0 0 120px 30px rgba(122,24,16,0.1)",
+          background: "radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%)",
+          boxShadow: "0 0 120px 30px rgba(201,168,76,0.1)",
         }}
       />
       <div
         className="relative h-[400px] w-[400px] overflow-hidden rounded-full sm:h-[460px] sm:w-[460px]"
         style={{
-          boxShadow: `0 0 0 2px ${FIRE}, 0 0 50px rgba(122,24,16,0.3), inset 0 0 80px rgba(0,0,0,0.5)`,
+          boxShadow: `0 0 0 2px ${FIRE}, 0 0 50px rgba(201,168,76,0.3), inset 0 0 80px rgba(0,0,0,0.5)`,
         }}
       >
         <Image src={src} alt={alt} fill className="object-cover" style={{ objectPosition: "60% center" }} sizes="460px" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0c0802]/70 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#080d18]/70 via-transparent to-transparent" />
       </div>
     </div>
   );
@@ -257,21 +257,21 @@ function NeonPhoto({ src, alt }: { src: string; alt: string }) {
 function AccordionFAQ() {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <div style={{ borderTop: "1px solid #2e2010" }}>
+    <div style={{ borderTop: "1px solid #1e2a45" }}>
       {faqs.map((faq, i) => (
-        <div key={i} style={{ borderBottom: "1px solid #2e2010" }}>
+        <div key={i} style={{ borderBottom: "1px solid #1e2a45" }}>
           <button
             onClick={() => setOpen(open === i ? null : i)}
             className="flex w-full items-center justify-between py-5 text-left"
           >
-            <span className="font-sub text-base font-medium" style={{ color: "#f0ebe3" }}>{faq.q}</span>
+            <span className="font-sub text-base font-medium" style={{ color: "#f0ece3" }}>{faq.q}</span>
             <span
               className="ml-4 shrink-0 text-2xl font-light transition-transform duration-200"
               style={{ color: FIRE, transform: open === i ? "rotate(45deg)" : "rotate(0)" }}
             >+</span>
           </button>
           {open === i && (
-            <p className="pb-5 text-sm leading-relaxed" style={{ color: "#b8a898" }}>{faq.a}</p>
+            <p className="pb-5 text-sm leading-relaxed" style={{ color: "#a8a09a" }}>{faq.a}</p>
           )}
         </div>
       ))}
@@ -343,17 +343,17 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section style={{ background: "#0c0802", position: "relative", overflow: "hidden", minHeight: "90vh" }}>
+      <section style={{ background: "#080d18", position: "relative", overflow: "hidden", minHeight: "90vh" }}>
         {/* Silhouette — full background, right-anchored on desktop, centered on mobile */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center lg:justify-end lg:pr-8">
           <div ref={silhouetteRef} className="relative h-[700px] w-[700px] shrink-0 opacity-90 lg:h-[800px] lg:w-[800px]" style={{ willChange: "transform" }}>
             <div
               className="absolute inset-0 rounded-full"
-              style={{ background: "radial-gradient(circle, rgba(122,24,16,0.12) 0%, rgba(122,24,16,0.04) 50%, transparent 72%)" }}
+              style={{ background: "radial-gradient(circle, rgba(201,168,76,0.12) 0%, rgba(201,168,76,0.04) 50%, transparent 72%)" }}
             />
             <div
               className="relative h-full w-full overflow-hidden rounded-full"
-              style={{ boxShadow: "0 0 0 1px rgba(122,24,16,0.4)" }}
+              style={{ boxShadow: "0 0 0 1px rgba(201,168,76,0.4)" }}
             >
               <Image src="/photos/silhouette-hero.png" alt="Dylan Valenti" fill priority className="object-cover object-center" sizes="800px" />
             </div>
@@ -374,7 +374,7 @@ export default function HomePage() {
         {/* Credential tag */}
         <div
           className="absolute bottom-[28%] right-[10%] z-10 hidden items-center gap-2 border-l-2 pl-3 text-xs font-sub font-semibold uppercase tracking-wider lg:flex"
-          style={{ borderColor: FIRE, color: "#b8a898" }}
+          style={{ borderColor: FIRE, color: "#a8a09a" }}
         >
           Coach Dylan V. · Helping Busy Men Build Muscle
         </div>
@@ -388,12 +388,12 @@ export default function HomePage() {
                 1-ON-1 ONLINE COACHING FOR BUSY MEN
               </p>
             </div>
-            <h1 className="font-display mt-6 leading-[0.95]" style={{ fontSize: "clamp(3.5rem,8.5vw,7rem)", color: "#f0ebe3" }}>
+            <h1 className="font-display mt-6 leading-[0.95]" style={{ fontSize: "clamp(3.5rem,8.5vw,7rem)", color: "#f0ece3" }}>
               BUILD MUSCLE<br />
               <span style={{ color: FIRE }}>WITHOUT LIVING</span><br />
               IN THE GYM.
             </h1>
-            <p className="mt-8 max-w-lg text-[15px] leading-relaxed" style={{ color: "#b8a898" }}>
+            <p className="mt-8 max-w-lg text-[15px] leading-relaxed" style={{ color: "#a8a09a" }}>
               You&apos;re busy. Work, responsibilities, life... the gym keeps getting pushed back.
               This program is built around YOUR schedule, not the other way around. Structured training,
               real accountability, and a coach who will get you to your goals.
@@ -402,11 +402,11 @@ export default function HomePage() {
               <Link href="/apply" className="btn-primary">BOOK YOUR FREE CALL →</Link>
               <Link href="/apply" className="btn-outline">APPLY NOW</Link>
             </div>
-            <div className="mt-16 grid grid-cols-3 gap-6 pt-10" style={{ borderTop: "1px solid #2e2010" }}>
+            <div className="mt-16 grid grid-cols-3 gap-6 pt-10" style={{ borderTop: "1px solid #1e2a45" }}>
               {stats.map((s) => (
                 <div key={s.label}>
                   <p className="font-display leading-none" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: FIRE }}>{s.value}</p>
-                  <p className="mt-2 text-xs tracking-wider" style={{ color: "#b8a898" }}>{s.label}</p>
+                  <p className="mt-2 text-xs tracking-wider" style={{ color: "#a8a09a" }}>{s.label}</p>
                 </div>
               ))}
             </div>
@@ -414,18 +414,18 @@ export default function HomePage() {
         </div>
       </section>
       {/* ── THE COACH ── */}
-      <section id="program" style={{ background: "#1a1208", position: "relative", overflow: "hidden" }}>
+      <section id="program" style={{ background: "#0e1526", position: "relative", overflow: "hidden" }}>
         <Dots count={8} />
         <div className="relative mx-auto max-w-6xl px-6 pt-24 pb-10 sm:pt-32 sm:pb-12">
           {/* Before / After above everything */}
           <div ref={beforeAfterRef} className="mb-14 flex gap-2 overflow-hidden rounded-sm mx-auto" style={{ maxWidth: 500, willChange: "transform" }}>
             <div className="relative flex-1 aspect-[3/4] overflow-hidden">
               <Image src="/photos/dylan-before-new.jpg" alt="Before" fill className="object-cover" style={{ objectPosition: "center 20%" }} sizes="250px" />
-              <div className="absolute bottom-0 left-0 right-0 py-2 text-center font-sub text-[11px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.8)", color: "#b8a898" }}>BEFORE · 170 LBS</div>
+              <div className="absolute bottom-0 left-0 right-0 py-2 text-center font-sub text-[11px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.8)", color: "#a8a09a" }}>BEFORE · 170 LBS</div>
             </div>
             <div className="relative flex-1 aspect-[3/4] overflow-hidden">
               <Image src="/photos/dylan-after-3.png" alt="After" fill className="object-cover" style={{ objectPosition: "center top" }} sizes="400px" />
-              <div className="absolute bottom-0 left-0 right-0 py-2 text-center font-sub text-[11px] font-bold tracking-widest" style={{ background: "rgba(184,40,24,0.8)", color: "#f0ebe3" }}>AFTER · 200 LBS</div>
+              <div className="absolute bottom-0 left-0 right-0 py-2 text-center font-sub text-[11px] font-bold tracking-widest" style={{ background: "rgba(201,168,76,0.8)", color: "#f0ece3" }}>AFTER · 200 LBS</div>
             </div>
           </div>
           {/* Story block — beach photo as background */}
@@ -444,7 +444,7 @@ export default function HomePage() {
             <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(12,8,2,0.75) 0%, rgba(12,8,2,0.4) 40%, rgba(12,8,2,0.75) 100%)" }} />
             <div className="relative px-10 py-16 sm:px-16 sm:py-20 max-w-2xl">
               <p className="font-sub text-xs font-semibold tracking-[0.25em]" style={{ color: FIRE }}>THE COACH</p>
-              <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(2.8rem,6.5vw,5rem)", color: "#f0ebe3" }}>
+              <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(2.8rem,6.5vw,5rem)", color: "#f0ece3" }}>
                 MOST PROGRAMS AREN&apos;T BUILT FOR YOUR LIFE.
               </h2>
               <p className="mt-6 text-[15px] leading-relaxed" style={{ color: "#d4c8b8" }}>
@@ -460,18 +460,18 @@ export default function HomePage() {
           <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
             {features.map((f) => (
               <div key={f.title} className="card rounded-sm p-4">
-                <div className="flex h-9 w-9 items-center justify-center rounded-sm" style={{ background: "rgba(122,24,16,0.12)" }}>
+                <div className="flex h-9 w-9 items-center justify-center rounded-sm" style={{ background: "rgba(201,168,76,0.12)" }}>
                   {f.icon}
                 </div>
-                <h3 className="font-sub mt-3 text-sm font-semibold" style={{ color: "#f0ebe3" }}>{f.title}</h3>
-                <p className="mt-1 text-xs leading-relaxed" style={{ color: "#b8a898" }}>{f.desc}</p>
+                <h3 className="font-sub mt-3 text-sm font-semibold" style={{ color: "#f0ece3" }}>{f.title}</h3>
+                <p className="mt-1 text-xs leading-relaxed" style={{ color: "#a8a09a" }}>{f.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* ── HOW IT WORKS ── */}
-      <section style={{ background: "#1a1208", position: "relative", overflow: "hidden" }}>
+      <section style={{ background: "#0e1526", position: "relative", overflow: "hidden" }}>
         <div className="absolute inset-0">
           <Image src="/photos/dylan-gym-curl.jpg" alt="" fill className="object-cover" style={{ objectPosition: "30% center", opacity: 0.75, filter: "blur(1px) brightness(0.75)" }} sizes="100vw" />
           <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 30% center, transparent 20%, rgba(26,18,8,0.85) 70%)" }} />
@@ -481,7 +481,7 @@ export default function HomePage() {
           <div className="max-w-2xl">
             <div>
               <p className="font-sub text-xs font-semibold tracking-[0.25em]" style={{ color: FIRE }}>THE PROCESS</p>
-              <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(2.8rem,6vw,4.5rem)", color: "#f0ebe3" }}>
+              <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(2.8rem,6vw,4.5rem)", color: "#f0ece3" }}>
                 HOW IT ACTUALLY WORKS.
               </h2>
               <div className="mt-12 space-y-10">
@@ -493,11 +493,11 @@ export default function HomePage() {
                 ].map((step) => (
                   <div key={step.num} className="flex gap-6">
                     <div className="shrink-0">
-                      <p className="font-display leading-none" style={{ fontSize: "3rem", color: "rgba(122,24,16,0.7)" }}>{step.num}</p>
+                      <p className="font-display leading-none" style={{ fontSize: "3rem", color: "rgba(201,168,76,0.7)" }}>{step.num}</p>
                     </div>
                     <div className="pt-1">
-                      <h3 className="font-sub text-base font-bold" style={{ color: "#f0ebe3" }}>{step.title}</h3>
-                      <p className="mt-2 text-sm leading-relaxed" style={{ color: "#b8a898" }}>{step.body}</p>
+                      <h3 className="font-sub text-base font-bold" style={{ color: "#f0ece3" }}>{step.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed" style={{ color: "#a8a09a" }}>{step.body}</p>
                     </div>
                   </div>
                 ))}
@@ -509,12 +509,12 @@ export default function HomePage() {
       </section>
 
       {/* ── RESULTS GALLERY ── */}
-      <section style={{ background: "#1a1208", position: "relative", overflow: "hidden" }}>
+      <section style={{ background: "#0e1526", position: "relative", overflow: "hidden" }}>
         <Dots count={6} />
         <div className="relative mx-auto max-w-6xl px-6 py-24 sm:py-32">
           <div ref={resultsHeadRef} className="text-center mb-14" style={{ willChange: "transform" }}>
             <p className="font-sub text-xs font-semibold tracking-[0.25em]" style={{ color: FIRE }}>CLIENT TRANSFORMATIONS</p>
-            <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(2.8rem,6vw,4.5rem)", color: "#f0ebe3" }}>
+            <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(2.8rem,6vw,4.5rem)", color: "#f0ece3" }}>
               REAL RESULTS FROM REAL PEOPLE.
             </h2>
           </div>
@@ -522,17 +522,17 @@ export default function HomePage() {
           <div className="mb-10 fade-in-block">
             <p className="font-sub text-xs font-semibold tracking-[0.25em] mb-4" style={{ color: FIRE }}>AIDAN — 6 MONTHS</p>
             <div className="flex gap-3 lg:gap-5">
-              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid #2e2010" }}>
+              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid #1e2a45" }}>
                 <Image src="/photos/aidan-before-2b.jpg" alt="Aidan before" fill className="object-cover object-top" sizes="400px" />
-                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.75)", color: "#b8a898" }}>BEFORE</div>
+                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.75)", color: "#a8a09a" }}>BEFORE</div>
               </div>
-              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid rgba(122,24,16,0.6)" }}>
+              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid rgba(201,168,76,0.6)" }}>
                 <Image src="/photos/aidan-after-2b.jpg" alt="Aidan after" fill className="object-cover object-top" sizes="400px" />
-                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(184,40,24,0.75)", color: "#f0ebe3" }}>AFTER</div>
+                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(201,168,76,0.75)", color: "#f0ece3" }}>AFTER</div>
               </div>
             </div>
             <div className="mt-5 rounded-sm px-5 py-5" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
-              <p className="text-sm leading-relaxed" style={{ color: "#b8a898" }}>
+              <p className="text-sm leading-relaxed" style={{ color: "#a8a09a" }}>
                 &ldquo;Before coaching, I was training hard but getting nowhere. In just six months, I built more muscle than I ever thought possible. The personalized workouts, nutrition guidance, and weekly accountability made all the difference.&rdquo;
               </p>
               <p className="mt-3 font-sub text-[10px] font-bold tracking-[0.2em]" style={{ color: FIRE }}>— AIDAN</p>
@@ -543,20 +543,20 @@ export default function HomePage() {
           <div className="mb-10 fade-in-block">
             <p className="font-sub text-xs font-semibold tracking-[0.25em] mb-4" style={{ color: FIRE }}>DASH P. — 4 MONTHS</p>
             <div className="flex gap-3 lg:gap-5">
-              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid #2e2010" }}>
+              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid #1e2a45" }}>
                 <Image src="/photos/dash-before-1.jpg" alt="Dash before" fill className="object-cover object-top" sizes="400px" />
-                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.75)", color: "#b8a898" }}>BEFORE</div>
+                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.75)", color: "#a8a09a" }}>BEFORE</div>
               </div>
-              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid rgba(122,24,16,0.6)" }}>
+              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid rgba(201,168,76,0.6)" }}>
                 <Image src="/photos/dash-after-1b.jpg" alt="Dash after" fill className="object-cover" style={{ objectPosition: "center 15%" }} sizes="400px" />
-                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(184,40,24,0.75)", color: "#f0ebe3" }}>AFTER</div>
+                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(201,168,76,0.75)", color: "#f0ece3" }}>AFTER</div>
               </div>
             </div>
             <div className="mt-5 rounded-sm px-5 py-5" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
               <p className="font-sub text-[10px] font-bold tracking-[0.25em] mb-3" style={{ color: FIRE }}>WHAT CHANGED IN 4 MONTHS</p>
               <div className="flex gap-3 flex-wrap mb-4">
                 {["Way bigger", "Way stronger", "Way more confident"].map((item) => (
-                  <span key={item} className="font-display text-lg leading-tight" style={{ color: "#f0ebe3" }}>
+                  <span key={item} className="font-display text-lg leading-tight" style={{ color: "#f0ece3" }}>
                     {item}<span style={{ color: FIRE }}> ·</span>
                   </span>
                 ))}
@@ -575,7 +575,7 @@ export default function HomePage() {
             <a
               href="/free"
               className="inline-block font-sub text-sm font-bold tracking-[0.2em] px-8 py-4"
-              style={{ background: FIRE, color: "#f0ebe3" }}
+              style={{ background: FIRE, color: "#f0ece3" }}
             >
               BOOK YOUR FREE CALL
             </a>
@@ -585,13 +585,13 @@ export default function HomePage() {
           <div className="mb-10 fade-in-block">
             <p className="font-sub text-xs font-semibold tracking-[0.25em] mb-4" style={{ color: FIRE }}>AIDAN — 6 MONTHS</p>
             <div className="flex gap-3 lg:gap-5">
-              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid #2e2010" }}>
+              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid #1e2a45" }}>
                 <Image src="/photos/aidan-before-1b.jpg" alt="Aidan before" fill className="object-cover" style={{ objectPosition: "center 20%" }} sizes="400px" />
-                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.75)", color: "#b8a898" }}>BEFORE</div>
+                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.75)", color: "#a8a09a" }}>BEFORE</div>
               </div>
-              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid rgba(122,24,16,0.6)" }}>
+              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid rgba(201,168,76,0.6)" }}>
                 <Image src="/photos/aidan-after-1b.jpg" alt="Aidan after" fill className="object-cover" style={{ objectPosition: "center 20%" }} sizes="400px" />
-                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(184,40,24,0.75)", color: "#f0ebe3" }}>AFTER</div>
+                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(201,168,76,0.75)", color: "#f0ece3" }}>AFTER</div>
               </div>
             </div>
           </div>
@@ -600,13 +600,13 @@ export default function HomePage() {
           <div className="mb-10 fade-in-block">
             <p className="font-sub text-xs font-semibold tracking-[0.25em] mb-4" style={{ color: FIRE }}>DASH P. — 4 MONTHS</p>
             <div className="flex gap-3 lg:gap-5">
-              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid #2e2010" }}>
+              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid #1e2a45" }}>
                 <Image src="/photos/dash-before-2.jpg" alt="Dash before" fill className="object-cover object-top" sizes="400px" />
-                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.75)", color: "#b8a898" }}>BEFORE</div>
+                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.75)", color: "#a8a09a" }}>BEFORE</div>
               </div>
-              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid rgba(122,24,16,0.6)" }}>
+              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid rgba(201,168,76,0.6)" }}>
                 <Image src="/photos/dash-after-2.jpg" alt="Dash after" fill className="object-cover" style={{ objectPosition: "center 15%" }} sizes="400px" />
-                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(184,40,24,0.75)", color: "#f0ebe3" }}>AFTER</div>
+                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(201,168,76,0.75)", color: "#f0ece3" }}>AFTER</div>
               </div>
             </div>
           </div>
@@ -615,20 +615,20 @@ export default function HomePage() {
           <div className="fade-in-block">
             <p className="font-sub text-xs font-semibold tracking-[0.25em] mb-4" style={{ color: FIRE }}>NICK C. — 4 WEEKS</p>
             <div className="flex gap-3 lg:gap-5">
-              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid #2e2010" }}>
+              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid #1e2a45" }}>
                 <Image src="/photos/nick-before-1.jpg" alt="Nick before" fill className="object-cover object-top" sizes="400px" />
-                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.75)", color: "#b8a898" }}>BEFORE</div>
+                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.75)", color: "#a8a09a" }}>BEFORE</div>
               </div>
-              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid rgba(122,24,16,0.6)" }}>
+              <div className="flex-1 relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid rgba(201,168,76,0.6)" }}>
                 <Image src="/photos/nick-after-1.jpg" alt="Nick after" fill className="object-cover object-top" sizes="400px" />
-                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(184,40,24,0.75)", color: "#f0ebe3" }}>AFTER</div>
+                <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest" style={{ background: "rgba(201,168,76,0.75)", color: "#f0ece3" }}>AFTER</div>
               </div>
             </div>
             <div className="mt-5 rounded-sm px-5 py-5" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
               <p className="font-sub text-[10px] font-bold tracking-[0.25em] mb-3" style={{ color: FIRE }}>WHAT CHANGED IN 4 WEEKS</p>
               <div className="flex gap-3 flex-wrap">
                 {["Diet improved", "Cut fat", "Energy up", "Focus sharper", "Quality of life better", "Only getting better"].map((item, i, arr) => (
-                  <span key={item} className="font-display text-lg leading-tight" style={{ color: "#f0ebe3" }}>
+                  <span key={item} className="font-display text-lg leading-tight" style={{ color: "#f0ece3" }}>
                     {item}{i < arr.length - 1 && <span style={{ color: FIRE }}> ·</span>}
                   </span>
                 ))}
@@ -640,32 +640,32 @@ export default function HomePage() {
             <p className="font-sub text-xs font-semibold tracking-[0.25em] mb-4" style={{ color: FIRE }}>DIV — 2 MONTHS</p>
 
             {/* Headline stat */}
-            <div className="mb-6 rounded-sm px-5 py-5" style={{ background: "rgba(122,24,16,0.08)", border: "1px solid rgba(122,24,16,0.3)" }}>
-              <p className="font-display leading-tight" style={{ fontSize: "clamp(2rem,5vw,3rem)", color: "#f0ebe3" }}>
+            <div className="mb-6 rounded-sm px-5 py-5" style={{ background: "rgba(201,168,76,0.08)", border: "1px solid rgba(201,168,76,0.3)" }}>
+              <p className="font-display leading-tight" style={{ fontSize: "clamp(2rem,5vw,3rem)", color: "#f0ece3" }}>
                 115 → 150 LBS BENCH<br /><span style={{ color: FIRE }}>IN 2 MONTHS.</span>
               </p>
-              <p className="mt-3 text-sm leading-relaxed" style={{ color: "#b8a898" }}>
+              <p className="mt-3 text-sm leading-relaxed" style={{ color: "#a8a09a" }}>
                 Div&apos;s bench was stuck at 115. The problem wasn&apos;t his chest — his triceps were giving out at lockout. Dylan identified it, built dedicated tricep work into his program, and two months later Div hit 150 for 2 reps.
               </p>
             </div>
 
             {/* 4-photo grid */}
             <div className="grid grid-cols-4 gap-2">
-              <div className="relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid #2e2010" }}>
+              <div className="relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid #1e2a45" }}>
                 <Image src="/photos/div-gym-1.jpg" alt="Div benching 150lbs" fill className="object-cover" style={{ objectPosition: "center 60%" }} sizes="150px" />
-                <div className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[8px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.8)", color: "#b8a898" }}>150 LB PR</div>
+                <div className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[8px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.8)", color: "#a8a09a" }}>150 LB PR</div>
               </div>
-              <div className="relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid rgba(122,24,16,0.6)" }}>
+              <div className="relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid rgba(201,168,76,0.6)" }}>
                 <Image src="/photos/div-gym-2c.jpg" alt="Div tricep work" fill className="object-cover object-top" sizes="150px" />
-                <div className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[8px] font-bold tracking-widest" style={{ background: "rgba(122,24,16,0.75)", color: "#f0ebe3" }}>TRICEPS</div>
+                <div className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[8px] font-bold tracking-widest" style={{ background: "rgba(201,168,76,0.75)", color: "#f0ece3" }}>TRICEPS</div>
               </div>
-              <div className="relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid rgba(122,24,16,0.6)" }}>
+              <div className="relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid rgba(201,168,76,0.6)" }}>
                 <Image src="/photos/div-gym-3c.jpg" alt="Div training" fill className="object-cover object-top" sizes="150px" />
-                <div className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[8px] font-bold tracking-widest" style={{ background: "rgba(122,24,16,0.75)", color: "#f0ebe3" }}>LOCKED IN</div>
+                <div className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[8px] font-bold tracking-widest" style={{ background: "rgba(201,168,76,0.75)", color: "#f0ece3" }}>LOCKED IN</div>
               </div>
-              <div className="relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid rgba(122,24,16,0.6)" }}>
+              <div className="relative overflow-hidden rounded-sm aspect-[3/4]" style={{ border: "1px solid rgba(201,168,76,0.6)" }}>
                 <Image src="/photos/div-bench-2.jpg" alt="Div flexing" fill className="object-cover" style={{ objectPosition: "center top" }} sizes="150px" />
-                <div className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[8px] font-bold tracking-widest" style={{ background: "rgba(122,24,16,0.75)", color: "#f0ebe3" }}>STILL GOING</div>
+                <div className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[8px] font-bold tracking-widest" style={{ background: "rgba(201,168,76,0.75)", color: "#f0ece3" }}>STILL GOING</div>
               </div>
             </div>
 
@@ -686,15 +686,15 @@ export default function HomePage() {
         </div>
       </div>
       {/* ── STRUGGLE QUIZ TEASER ── */}
-      <section style={{ background: "#0c0802", position: "relative", overflow: "hidden" }}>
-        <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(ellipse at center, rgba(122,24,16,0.07) 0%, transparent 65%)" }} />
+      <section style={{ background: "#080d18", position: "relative", overflow: "hidden" }}>
+        <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(ellipse at center, rgba(201,168,76,0.07) 0%, transparent 65%)" }} />
         <Dots count={6} />
         <div className="relative mx-auto max-w-3xl px-6 py-24 text-center sm:py-32">
           <p className="font-sub text-xs font-semibold tracking-[0.25em]" style={{ color: FIRE }}>FREE CONSULTATION</p>
-          <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(2.8rem,7vw,5rem)", color: "#f0ebe3" }}>
+          <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(2.8rem,7vw,5rem)", color: "#f0ece3" }}>
             WHAT&apos;S YOUR BIGGEST STRUGGLE RIGHT NOW?
           </h2>
-          <p className="mt-5 text-[15px]" style={{ color: "#b8a898" }}>
+          <p className="mt-5 text-[15px]" style={{ color: "#a8a09a" }}>
             Answer a few quick questions so Dylan can review your situation before your call. It takes under a minute.
           </p>
           <div className="mt-10 grid gap-3 text-left sm:grid-cols-2">
@@ -703,9 +703,9 @@ export default function HomePage() {
                 key={s}
                 href="/apply"
                 className={`rounded-sm px-6 py-4 font-sub text-sm font-medium transition cursor-pointer${i === struggles.length ? " sm:col-span-2" : ""}`}
-                style={{ border: "1.5px solid rgba(240,235,227,0.18)", background: "#1a1208", color: "#f0ebe3" }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = FIRE; e.currentTarget.style.color = FIRE; e.currentTarget.style.background = "rgba(122,24,16,0.07)"; }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(240,235,227,0.18)"; e.currentTarget.style.color = "#f0ebe3"; e.currentTarget.style.background = "#1a1208"; }}
+                style={{ border: "1.5px solid rgba(240,235,227,0.18)", background: "#0e1526", color: "#f0ece3" }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = FIRE; e.currentTarget.style.color = FIRE; e.currentTarget.style.background = "rgba(201,168,76,0.07)"; }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(240,235,227,0.18)"; e.currentTarget.style.color = "#f0ece3"; e.currentTarget.style.background = "#0e1526"; }}
               >
                 {s}
               </Link>
@@ -714,67 +714,67 @@ export default function HomePage() {
         </div>
       </section>
       {/* ── TYLER TRAINING PHOTOS ── */}
-      <section style={{ background: "#0c0802", position: "relative" }}>
+      <section style={{ background: "#080d18", position: "relative" }}>
         <div className="relative mx-auto max-w-6xl px-6 pt-16 pb-0">
           <p className="font-sub text-xs font-semibold tracking-[0.25em] mb-4" style={{ color: FIRE }}>TYLER — 1-1 SESSION</p>
           <div className="grid grid-cols-3 gap-3">
             <div className="relative overflow-hidden rounded-sm aspect-[3/4]">
               <Image src="/photos/tyler-2243v3.jpg" alt="Tyler chest press" fill className="object-cover object-top" sizes="400px" />
-              <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[9px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.85)", color: "#f0ebe3" }}>CHEST PRESS</div>
+              <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[9px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.85)", color: "#f0ece3" }}>CHEST PRESS</div>
             </div>
             <div className="relative overflow-hidden rounded-sm aspect-[3/4]">
               <Image src="/photos/tyler-2248v2.jpg" alt="Tyler incline bench" fill className="object-cover" style={{ objectPosition: "center 20%" }} sizes="400px" />
-              <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[9px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.85)", color: "#f0ebe3" }}>INCLINE BENCH</div>
+              <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[9px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.85)", color: "#f0ece3" }}>INCLINE BENCH</div>
             </div>
             <div className="relative overflow-hidden rounded-sm aspect-[3/4]">
               <Image src="/photos/tyler-2257b.jpg" alt="Tyler curls" fill className="object-cover object-top" sizes="400px" />
-              <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[9px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.85)", color: "#f0ebe3" }}>PREACHER CURLS</div>
+              <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[9px] font-bold tracking-widest" style={{ background: "rgba(12,8,2,0.85)", color: "#f0ece3" }}>PREACHER CURLS</div>
             </div>
           </div>
-          <p className="text-base leading-relaxed mt-6 max-w-2xl" style={{ color: "#b8a898" }}>
+          <p className="text-base leading-relaxed mt-6 max-w-2xl" style={{ color: "#a8a09a" }}>
             Tyler came into the gym nervous and unstructured. We ran my full chest and biceps program. I coached him through every set. By the end of the session he had a program, a plan, and knew exactly how to train.
           </p>
         </div>
       </section>
-      <div style={{ background: "#0c0802", height: "80px" }} />
+      <div style={{ background: "#080d18", height: "80px" }} />
       {/* ── 315 BENCH ── */}
-      <section style={{ background: "#0c0802", position: "relative", overflow: "hidden" }}>
+      <section style={{ background: "#080d18", position: "relative", overflow: "hidden" }}>
         <div className="relative mx-auto max-w-lg px-6 pb-24">
           <style>{`.bench-fade, .fade-in-block { opacity: 0; transform: translateY(16px); transition: opacity 1s ease, transform 1s ease; } .bench-visible { opacity: 1 !important; transform: translateY(0) !important; }`}</style>
-          <div ref={benchImgRef} className="bench-fade overflow-hidden rounded-sm relative" style={{ aspectRatio: "3/4", border: "1px solid rgba(122,24,16,0.4)" }}>
+          <div ref={benchImgRef} className="bench-fade overflow-hidden rounded-sm relative" style={{ aspectRatio: "3/4", border: "1px solid rgba(201,168,76,0.4)" }}>
             <Image src="/photos/dylan-bench-315.jpg" alt="Dylan benching 315lbs" fill className="object-cover" style={{ objectPosition: "center 30%" }} sizes="500px" />
-            <div className="absolute bottom-0 left-0 right-0 py-2.5 text-center font-sub text-[11px] font-bold tracking-widest" style={{ background: "rgba(122,24,16,0.85)", color: "#f0ebe3" }}>315 LBS BENCH PRESS</div>
+            <div className="absolute bottom-0 left-0 right-0 py-2.5 text-center font-sub text-[11px] font-bold tracking-widest" style={{ background: "rgba(201,168,76,0.85)", color: "#f0ece3" }}>315 LBS BENCH PRESS</div>
           </div>
         </div>
       </section>
 
       {/* ── PLANS ── */}
-      <section id="plans" style={{ background: "#1a1208", position: "relative", overflow: "hidden" }}>
+      <section id="plans" style={{ background: "#0e1526", position: "relative", overflow: "hidden" }}>
         <Dots count={8} />
         <div className="relative mx-auto max-w-6xl px-6 py-24 sm:py-32">
           <div ref={plansRef} className="text-center" style={{ willChange: "transform" }}>
             <p className="font-sub text-xs font-semibold tracking-[0.25em]" style={{ color: FIRE }}>THE COACHING</p>
-            <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(2.8rem,7vw,5rem)", color: "#f0ebe3" }}>
+            <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(2.8rem,7vw,5rem)", color: "#f0ece3" }}>
               ONE PROGRAM.<br />BUILT FOR YOU.
             </h2>
           </div>
           <div className="mt-14 mx-auto max-w-lg">
             <div className="relative overflow-hidden rounded-sm p-8 sm:p-10"
               style={{
-                background: "#251a0a",
+                background: "#141d33",
                 border: `1.5px solid ${FIRE}`,
-                boxShadow: `0 0 0 1px rgba(122,24,16,0.2), 0 0 60px rgba(122,24,16,0.1)`,
+                boxShadow: `0 0 0 1px rgba(201,168,76,0.2), 0 0 60px rgba(201,168,76,0.1)`,
               }}
             >
               <div className="absolute right-0 top-0 px-4 py-1 font-sub text-[10px] font-bold tracking-widest text-white"
                 style={{ background: FIRE }}>
                 LIMITED SPOTS
               </div>
-              <h3 className="font-display text-4xl sm:text-5xl" style={{ color: "#f0ebe3" }}>1-on-1 Coaching</h3>
+              <h3 className="font-display text-4xl sm:text-5xl" style={{ color: "#f0ece3" }}>1-on-1 Coaching</h3>
               <p className="mt-4 font-sub text-xs font-semibold" style={{ color: FIRE }}>Pricing confirmed on your free call</p>
               <ul className="mt-6 space-y-3">
                 {coachingFeatures.map((f) => (
-                  <li key={f} className="flex items-start gap-2.5 text-sm" style={{ color: "#b8a898" }}>
+                  <li key={f} className="flex items-start gap-2.5 text-sm" style={{ color: "#a8a09a" }}>
                     <span className="mt-0.5 shrink-0 font-bold" style={{ color: FIRE }}>✓</span>{f}
                   </li>
                 ))}
@@ -787,15 +787,15 @@ export default function HomePage() {
         </div>
       </section>
       {/* ── PRE-FAQ CTA ── */}
-      <section style={{ background: "#0c0802", position: "relative", overflow: "hidden" }} className="py-28 text-center sm:py-36">
-        <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(ellipse at center, rgba(122,24,16,0.1) 0%, transparent 60%)" }} />
+      <section style={{ background: "#080d18", position: "relative", overflow: "hidden" }} className="py-28 text-center sm:py-36">
+        <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(ellipse at center, rgba(201,168,76,0.1) 0%, transparent 60%)" }} />
         <Dots count={8} />
         <div className="relative mx-auto max-w-2xl px-6">
           <p className="font-sub text-xs font-semibold tracking-[0.25em]" style={{ color: FIRE }}>FREE CONSULTATION</p>
-          <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(3.5rem,9vw,6.5rem)", color: "#f0ebe3" }}>
+          <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(3.5rem,9vw,6.5rem)", color: "#f0ece3" }}>
             BOOK YOUR FREE CALL.
           </h2>
-          <p className="mt-5 text-[15px]" style={{ color: "#b8a898" }}>
+          <p className="mt-5 text-[15px]" style={{ color: "#a8a09a" }}>
             Answer a few quick questions so Dylan can review your situation before your call. It takes under a minute.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -806,13 +806,13 @@ export default function HomePage() {
       </section>
 
       {/* ── FAQ ── */}
-      <section id="faq" style={{ background: "#1a1208", position: "relative", overflow: "hidden" }}>
+      <section id="faq" style={{ background: "#0e1526", position: "relative", overflow: "hidden" }}>
         <Dots count={6} />
         <div className="relative mx-auto max-w-3xl px-6 py-24 sm:py-32">
           <div ref={faqRef} style={{ willChange: "transform" }}>
           <div className="text-center">
             <p className="font-sub text-xs font-semibold tracking-[0.25em]" style={{ color: FIRE }}>QUESTIONS</p>
-            <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(2.8rem,6vw,4.5rem)", color: "#f0ebe3" }}>
+            <h2 className="font-display mt-4 leading-[0.95]" style={{ fontSize: "clamp(2.8rem,6vw,4.5rem)", color: "#f0ece3" }}>
               FREQUENTLY ASKED.
             </h2>
           </div>

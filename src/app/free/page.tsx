@@ -106,8 +106,8 @@ function CtaButton({ onClick }: { onClick: () => void }) {
       onClick={onClick}
       className="w-full py-4 font-sub text-sm font-bold tracking-wider text-white transition active:scale-[0.98]"
       style={{
-        background: `linear-gradient(160deg, #1a0602 0%, ${FIRE} 45%, #7a1810 100%)`,
-        boxShadow: `0 4px 24px rgba(184,40,24,0.45)`,
+        background: `linear-gradient(160deg, #1a0602 0%, ${FIRE} 45%, #c9a84c 100%)`,
+        boxShadow: `0 4px 24px rgba(201,168,76,0.45)`,
       }}
     >
       SEND ME THE FREE WORKOUT →
@@ -166,8 +166,8 @@ export default function FreePage() {
   if (stage === "landing") {
     return (
       <div className="relative flex min-h-screen flex-col items-center overflow-hidden px-5 py-16 text-center"
-        style={{ background: "#0c0802" }}>
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(184,40,24,0.13)_0%,transparent_60%)]" />
+        style={{ background: "#080d18" }}>
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,168,76,0.13)_0%,transparent_60%)]" />
 
         <div className="relative w-full max-w-sm">
           <p className="font-sub text-xs font-bold tracking-[0.3em]" style={{ color: FIRE }}>
@@ -181,7 +181,7 @@ export default function FreePage() {
             WORKOUT
           </h1>
 
-          <p className="mt-5 text-sm leading-relaxed" style={{ color: "#b8a898" }}>
+          <p className="mt-5 text-sm leading-relaxed" style={{ color: "#a8a09a" }}>
             The exact back training protocol I used to go from 170 to 200lbs — thickness, width, and the V-taper that makes you look built in any shirt.
           </p>
 
@@ -189,10 +189,10 @@ export default function FreePage() {
           <div className="mt-6 flex items-center justify-center gap-4">
             {[["30+", "lbs gained"], ["7mo", "transformation"], ["Free", "no bs"]].map(([val, label]) => (
               <div key={label} className="text-center">
-                <p className="font-display text-2xl" style={{ color: "#f0ebe3" }}>{val}</p>
+                <p className="font-display text-2xl" style={{ color: "#f0ece3" }}>{val}</p>
                 <p className="font-sub text-[9px] uppercase tracking-wider" style={{ color: "#6b5c4d" }}>{label}</p>
               </div>
-            )).reduce<React.ReactNode[]>((acc, el, i) => i === 0 ? [el] : [...acc, <div key={i} className="h-8 w-px" style={{ background: "#2e2010" }} />, el], [])}
+            )).reduce<React.ReactNode[]>((acc, el, i) => i === 0 ? [el] : [...acc, <div key={i} className="h-8 w-px" style={{ background: "#1e2a45" }} />, el], [])}
           </div>
 
           {/* CTA above */}
@@ -205,22 +205,22 @@ export default function FreePage() {
             {/* Aidan */}
             <div>
               <div className="flex items-baseline justify-between mb-2">
-                <p className="font-sub text-sm font-bold" style={{ color: "#f0ebe3" }}>Aidan</p>
+                <p className="font-sub text-sm font-bold" style={{ color: "#f0ece3" }}>Aidan</p>
                 <p className="font-sub text-xs font-semibold" style={{ color: FIRE }}>6 MONTHS</p>
               </div>
               <div className="grid grid-cols-2 gap-2">
-                <div className="relative aspect-[3/4] overflow-hidden rounded-sm" style={{ border: "1px solid #2e2010" }}>
+                <div className="relative aspect-[3/4] overflow-hidden rounded-sm" style={{ border: "1px solid #1e2a45" }}>
                   <Image src="/photos/aidan-before-2b.jpg" alt="Aidan before" fill className="object-cover object-top" sizes="160px" />
                   <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest"
-                    style={{ background: "rgba(12,8,2,0.9)", color: "#b8a898" }}>BEFORE</div>
+                    style={{ background: "rgba(12,8,2,0.9)", color: "#a8a09a" }}>BEFORE</div>
                 </div>
-                <div className="relative aspect-[3/4] overflow-hidden rounded-sm" style={{ border: `1px solid rgba(184,40,24,0.6)` }}>
+                <div className="relative aspect-[3/4] overflow-hidden rounded-sm" style={{ border: `1px solid rgba(201,168,76,0.6)` }}>
                   <Image src="/photos/aidan-after-2b.jpg" alt="Aidan after" fill className="object-cover object-top" sizes="160px" />
                   <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest"
-                    style={{ background: "rgba(184,40,24,0.9)", color: "#f0ebe3" }}>AFTER</div>
+                    style={{ background: "rgba(201,168,76,0.9)", color: "#f0ece3" }}>AFTER</div>
                 </div>
               </div>
-              <div className="mt-2 rounded-sm p-4 text-left" style={{ background: "#251a0a", border: "1px solid #2e2010" }}>
+              <div className="mt-2 rounded-sm p-4 text-left" style={{ background: "#141d33", border: "1px solid #1e2a45" }}>
                 <StarRow />
                 <p className="mt-2 text-sm leading-relaxed" style={{ color: "#c8b8a8" }}>
                   &ldquo;I went from having no idea what I was doing to actually looking like I lift. The back growth alone was insane.&rdquo;
@@ -231,22 +231,22 @@ export default function FreePage() {
             {/* Nick C. */}
             <div>
               <div className="flex items-baseline justify-between mb-2">
-                <p className="font-sub text-sm font-bold" style={{ color: "#f0ebe3" }}>Nick C.</p>
+                <p className="font-sub text-sm font-bold" style={{ color: "#f0ece3" }}>Nick C.</p>
                 <p className="font-sub text-xs font-semibold" style={{ color: FIRE }}>4 WEEKS</p>
               </div>
               <div className="grid grid-cols-2 gap-2">
-                <div className="relative aspect-[3/4] overflow-hidden rounded-sm" style={{ border: "1px solid #2e2010" }}>
+                <div className="relative aspect-[3/4] overflow-hidden rounded-sm" style={{ border: "1px solid #1e2a45" }}>
                   <Image src="/photos/nick-before-1.jpg" alt="Nick before" fill className="object-cover object-top" sizes="160px" />
                   <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest"
-                    style={{ background: "rgba(12,8,2,0.9)", color: "#b8a898" }}>BEFORE</div>
+                    style={{ background: "rgba(12,8,2,0.9)", color: "#a8a09a" }}>BEFORE</div>
                 </div>
-                <div className="relative aspect-[3/4] overflow-hidden rounded-sm" style={{ border: `1px solid rgba(184,40,24,0.6)` }}>
+                <div className="relative aspect-[3/4] overflow-hidden rounded-sm" style={{ border: `1px solid rgba(201,168,76,0.6)` }}>
                   <Image src="/photos/nick-after-1.jpg" alt="Nick after" fill className="object-cover object-top" sizes="160px" />
                   <div className="absolute bottom-0 left-0 right-0 py-1.5 text-center font-sub text-[10px] font-bold tracking-widest"
-                    style={{ background: "rgba(184,40,24,0.9)", color: "#f0ebe3" }}>AFTER</div>
+                    style={{ background: "rgba(201,168,76,0.9)", color: "#f0ece3" }}>AFTER</div>
                 </div>
               </div>
-              <div className="mt-2 rounded-sm p-4 text-left" style={{ background: "#251a0a", border: "1px solid #2e2010" }}>
+              <div className="mt-2 rounded-sm p-4 text-left" style={{ background: "#141d33", border: "1px solid #1e2a45" }}>
                 <StarRow />
                 <p className="mt-2 text-sm leading-relaxed" style={{ color: "#c8b8a8" }}>
                   &ldquo;Dylan&apos;s program is the first thing that&apos;s ever actually worked for me. I look completely different.&rdquo;
@@ -258,17 +258,17 @@ export default function FreePage() {
           {/* Dylan's transformation */}
           <div className="mt-6">
             <p className="font-sub text-[10px] font-bold tracking-[0.25em] mb-3 text-left" style={{ color: FIRE }}>THE COACH — 170 → 200 LBS</p>
-            <div className="flex gap-2 overflow-hidden rounded-sm" style={{ border: "1px solid #2e2010" }}>
+            <div className="flex gap-2 overflow-hidden rounded-sm" style={{ border: "1px solid #1e2a45" }}>
               <div className="relative flex-1 aspect-[3/4] overflow-hidden">
                 <Image src="/photos/dylan-back-before-correct.jpg" alt="Dylan before" fill className="object-cover"
                   style={{ objectPosition: "center 20%" }} sizes="160px" />
                 <div className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[9px] font-bold tracking-widest"
-                  style={{ background: "rgba(12,8,2,0.85)", color: "#b8a898" }}>BEFORE · 170 LBS</div>
+                  style={{ background: "rgba(12,8,2,0.85)", color: "#a8a09a" }}>BEFORE · 170 LBS</div>
               </div>
               <div className="relative flex-1 aspect-[3/4] overflow-hidden">
                 <Image src="/photos/dylan-back-after2.jpg" alt="Dylan after" fill className="object-cover object-top" sizes="160px" />
                 <div className="absolute bottom-0 left-0 right-0 py-1 text-center font-sub text-[9px] font-bold tracking-widest"
-                  style={{ background: "rgba(184,40,24,0.85)", color: "#f0ebe3" }}>AFTER · 200 LBS</div>
+                  style={{ background: "rgba(201,168,76,0.85)", color: "#f0ece3" }}>AFTER · 200 LBS</div>
               </div>
             </div>
           </div>
@@ -287,14 +287,14 @@ export default function FreePage() {
   if (stage === "form") {
     return (
       <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-5 py-16"
-        style={{ background: "#0c0802" }}>
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(184,40,24,0.08)_0%,transparent_60%)]" />
+        style={{ background: "#080d18" }}>
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,168,76,0.08)_0%,transparent_60%)]" />
         <div className="relative w-full max-w-sm">
           <p className="font-sub text-xs font-bold tracking-[0.3em] text-center" style={{ color: FIRE }}>ONE STEP AWAY</p>
           <h2 className="font-display mt-3 leading-none text-warm text-center" style={{ fontSize: "clamp(2rem,9vw,3rem)" }}>
             WHERE SHOULD WE<br /><span style={{ color: FIRE }}>SEND IT?</span>
           </h2>
-          <p className="mt-3 text-sm text-center" style={{ color: "#b8a898" }}>
+          <p className="mt-3 text-sm text-center" style={{ color: "#a8a09a" }}>
             Enter your details and we&apos;ll send the free back workout straight to your inbox.
           </p>
 
@@ -323,7 +323,7 @@ export default function FreePage() {
             </div>
             <button type="submit" disabled={!formValid() || submitting}
               className="mt-2 w-full py-4 font-sub text-sm font-bold tracking-wider text-white transition disabled:opacity-50"
-              style={{ background: `linear-gradient(160deg, #1a0602 0%, ${FIRE} 45%, #7a1810 100%)`, boxShadow: `0 4px 24px rgba(184,40,24,0.4)` }}>
+              style={{ background: `linear-gradient(160deg, #1a0602 0%, ${FIRE} 45%, #c9a84c 100%)`, boxShadow: `0 4px 24px rgba(201,168,76,0.4)` }}>
               {submitting ? "SENDING..." : "GET ACCESS NOW →"}
             </button>
             <p className="text-center text-xs" style={{ color: "#4a3c30" }}>
@@ -338,13 +338,13 @@ export default function FreePage() {
   /* ── QUESTIONS ── */
   if (stage === "questions") {
     return (
-      <div className="relative min-h-screen overflow-hidden px-5 py-16" style={{ background: "#0c0802" }}>
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(184,40,24,0.08)_0%,transparent_60%)]" />
+      <div className="relative min-h-screen overflow-hidden px-5 py-16" style={{ background: "#080d18" }}>
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,168,76,0.08)_0%,transparent_60%)]" />
         <div className="relative mx-auto w-full max-w-sm">
           {/* Header */}
           <div className="mb-2 flex justify-center">
             <div className="flex h-12 w-12 items-center justify-center rounded-full"
-              style={{ background: "rgba(184,40,24,0.15)", border: `1.5px solid ${FIRE}` }}>
+              style={{ background: "rgba(201,168,76,0.15)", border: `1.5px solid ${FIRE}` }}>
               <svg viewBox="0 0 24 24" fill="none" stroke={FIRE} strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
                 <polyline points="20 6 9 17 4 12" />
               </svg>
@@ -354,14 +354,14 @@ export default function FreePage() {
           <h2 className="font-display mt-3 leading-none text-warm text-center" style={{ fontSize: "clamp(1.8rem,8vw,2.8rem)" }}>
             ONE LAST THING,<br /><span style={{ color: FIRE }}>{form.firstName.toUpperCase()}.</span>
           </h2>
-          <p className="mt-3 text-sm text-center leading-relaxed" style={{ color: "#b8a898" }}>
+          <p className="mt-3 text-sm text-center leading-relaxed" style={{ color: "#a8a09a" }}>
             Answer a few quick questions so I can prepare for your free call and make sure it&apos;s worth your time.
           </p>
 
           <form onSubmit={submitQuestions} className="mt-8 space-y-7">
             {QUESTIONS.map((q, i) => (
               <div key={q.id}>
-                <label className="block text-sm font-semibold leading-snug mb-3" style={{ color: "#f0ebe3" }}>
+                <label className="block text-sm font-semibold leading-snug mb-3" style={{ color: "#f0ece3" }}>
                   <span style={{ color: FIRE }}>{i + 1}. </span>{q.label}
                 </label>
 
@@ -396,7 +396,7 @@ export default function FreePage() {
                         onClick={() => setAnswer(q.id, opt)}
                         className="w-full rounded-sm border px-4 py-3 text-left text-sm font-sub font-medium transition"
                         style={answers[q.id] === opt
-                          ? { borderColor: FIRE, background: "rgba(184,40,24,0.12)", color: "#f5ebe3" }
+                          ? { borderColor: FIRE, background: "rgba(201,168,76,0.12)", color: "#f5ebe3" }
                           : { borderColor: "rgba(255,255,255,0.08)", background: "rgba(255,255,255,0.02)", color: "#a89880" }}
                       >
                         {opt}
@@ -408,18 +408,18 @@ export default function FreePage() {
             ))}
 
             {/* Divider */}
-            <div className="pt-2 border-t" style={{ borderColor: "#2e2010" }}>
+            <div className="pt-2 border-t" style={{ borderColor: "#1e2a45" }}>
               <p className="font-sub text-[10px] uppercase tracking-widest text-center mb-5" style={{ color: "#6b5c4d" }}>
                 Last step — book your free call
               </p>
-              <p className="text-sm text-center leading-relaxed mb-6" style={{ color: "#b8a898" }}>
+              <p className="text-sm text-center leading-relaxed mb-6" style={{ color: "#a8a09a" }}>
                 I prepare for every call. Once you submit, you&apos;ll be taken straight to my calendar to lock in your spot.
               </p>
               <button
                 type="submit"
                 disabled={!questionsValid()}
                 className="w-full py-4 font-sub text-sm font-bold tracking-wider text-white transition disabled:opacity-40 disabled:cursor-not-allowed"
-                style={{ background: `linear-gradient(160deg, #1a0602 0%, ${FIRE} 45%, #7a1810 100%)`, boxShadow: `0 4px 24px rgba(184,40,24,0.4)` }}>
+                style={{ background: `linear-gradient(160deg, #1a0602 0%, ${FIRE} 45%, #c9a84c 100%)`, boxShadow: `0 4px 24px rgba(201,168,76,0.4)` }}>
                 SUBMIT &amp; BOOK MY FREE CALL →
               </button>
               <p className="mt-2 text-center text-xs" style={{ color: "#4a3c30" }}>Free. No commitment. 15 minutes.</p>
@@ -432,14 +432,14 @@ export default function FreePage() {
 
   /* ── BOOKED ── */
   return (
-    <div className="relative min-h-screen overflow-hidden px-5 py-16" style={{ background: "#0c0802" }}>
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(184,40,24,0.1)_0%,transparent_60%)]" />
+    <div className="relative min-h-screen overflow-hidden px-5 py-16" style={{ background: "#080d18" }}>
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,168,76,0.1)_0%,transparent_60%)]" />
       <div className="relative mx-auto w-full max-w-2xl text-center">
         <p className="font-sub text-xs font-bold tracking-[0.3em]" style={{ color: FIRE }}>YOU&apos;RE A GOOD FIT</p>
-        <h2 className="font-display mt-3 leading-none" style={{ fontSize: "clamp(2.2rem,10vw,3.5rem)", color: "#f0ebe3" }}>
+        <h2 className="font-display mt-3 leading-none" style={{ fontSize: "clamp(2.2rem,10vw,3.5rem)", color: "#f0ece3" }}>
           BOOK YOUR<br /><span style={{ color: FIRE }}>FREE CALL.</span>
         </h2>
-        <p className="mt-4 text-sm leading-relaxed" style={{ color: "#b8a898" }}>
+        <p className="mt-4 text-sm leading-relaxed" style={{ color: "#a8a09a" }}>
           Pick a time below. Dylan reviews your answers before every call so you&apos;re never starting from zero.
         </p>
 

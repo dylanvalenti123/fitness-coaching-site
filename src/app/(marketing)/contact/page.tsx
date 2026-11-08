@@ -1,6 +1,6 @@
 import { ContactForm } from "./contact-form";
 
-const FIRE = "#7a1810";
+const FIRE = "#c9a84c";
 
 export default function ContactPage() {
   return (
