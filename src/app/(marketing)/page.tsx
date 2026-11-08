@@ -355,7 +355,7 @@ export default function HomePage() {
               className="relative h-full w-full overflow-hidden rounded-full"
               style={{ boxShadow: "0 0 0 1px rgba(201,168,76,0.4)" }}
             >
-              <Image src="/photos/silhouette-hero.png" alt="Dylan Valenti" fill priority className="object-cover object-center" sizes="800px" />
+              <Image src="/photos/silhouette-hero-gold.png" alt="Dylan Valenti" fill priority className="object-cover object-center" sizes="800px" />
             </div>
           </div>
         </div>
